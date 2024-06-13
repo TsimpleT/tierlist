@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw; */
+    /* max-height: 100vh; */
+    /* display: flex; */
+    /* justify-content: space-evenly; */
+    margin: 8px 24px;
+    border: 1px dimgray solid;
+}
+
+.buttonHeader {
+    padding: 12px 10px;
+    border-bottom: 1px dimgray solid;
+}
+
+.buttonHeader span {
+    all: unset;
+    padding: 4px 8px;
+    border: 1px #E0E0CD solid;
+    background-color: #866C93;
+    margin-right: 8px;
+}
+
+.scroller {
+    height: 100%;
+    overflow-y: auto;
+}

@@ -1,0 +1,50 @@
+.tier {
+    display: flex;
+    /* flex-direction: row; */
+    border-bottom: 1px dimgrey solid;
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.tierBottom {
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    /* overflow: hidden; */
+}
+
+.tierText {
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 24px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-left: 8px;
+    width: 40px;
+    max-width: 40px;
+    /* text-align: center; */
+    border-right: 1px dimgray solid;
+}
+
+.tierCharacters {
+    display: flex;
+    /* flex-direction: row; */
+    position: relative;
+    /* padding-bottom: 5px; */
+    width: 100%;
+    height: 100%;
+    min-height: 49px;
+}
+
+/* .item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 40px);
+} */
+
+/* @each $rank, $color in $tiers {
+    .#{$rank} {
+        background-color: $color;
+    }
+} */
+
