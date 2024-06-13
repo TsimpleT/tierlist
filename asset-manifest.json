@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tierlist/static/css/main.03ac700b.css",
-    "main.js": "/tierlist/static/js/main.a97d861a.js",
+    "main.css": "/tierlist/static/css/main.e9ccdba7.css",
+    "main.js": "/tierlist/static/js/main.ee85fe64.js",
     "static/js/787.38d536dd.chunk.js": "/tierlist/static/js/787.38d536dd.chunk.js",
     "static/media/Maki Zenin.png": "/tierlist/static/media/Maki Zenin.7b021d69293728ca42ad.png",
     "static/media/faputa.png": "/tierlist/static/media/faputa.c83e71a7bb1cc00f8e86.png",
@@ -91,7 +91,6 @@
     "static/media/Arika Yamamoto.png": "/tierlist/static/media/Arika Yamamoto.bb18e7edcd189d03b479.png",
     "static/media/Suzune Horikita.png": "/tierlist/static/media/Suzune Horikita.4ec607a15698ab3625d1.png",
     "static/media/Shino Kiryuu.png": "/tierlist/static/media/Shino Kiryuu.72667bf3b7079404cf17.png",
-    "static/media/Riko Amanai.png": "/tierlist/static/media/Riko Amanai.8c9d2790208ff4b33995.png",
     "static/media/Ram.png": "/tierlist/static/media/Ram.0ff7d936af17de2212c1.png",
     "static/media/Kusuri Yakuzen.png": "/tierlist/static/media/Kusuri Yakuzen.715d88e351c68cecff67.png",
     "static/media/Echidna.png": "/tierlist/static/media/Echidna.124a954477b1716bda24.png",
@@ -104,6 +103,7 @@
     "static/media/Hideri Kanzaki.png": "/tierlist/static/media/Hideri Kanzaki.a3e3b2ff4b5decef69d9.png",
     "static/media/jeanne_jun-mochizuki.png": "/tierlist/static/media/jeanne_jun-mochizuki.6b4407ee0fbb79625f5a.png",
     "static/media/Chizuru Hishiro.png": "/tierlist/static/media/Chizuru Hishiro.3be550ee07adede97e1b.png",
+    "static/media/Riko Amanai.png": "/tierlist/static/media/Riko Amanai.dd748da070416b3bd3c4.png",
     "static/media/Yuzuriha.png": "/tierlist/static/media/Yuzuriha.73eec52d73e7ca31233f.png",
     "static/media/Mafuyu Hoshikawa.png": "/tierlist/static/media/Mafuyu Hoshikawa.b68f52552f62adb48989.png",
     "static/media/Suiu Fujiwara.png": "/tierlist/static/media/Suiu Fujiwara.c6597cf9d5c9afe2199a.png",
@@ -161,12 +161,12 @@
     "static/media/Himeno.png": "/tierlist/static/media/Himeno.8359db7dbef50afaaa3b.png",
     "static/media/Pochita.png": "/tierlist/static/media/Pochita.eda8f5ccb7531ef60cf0.png",
     "index.html": "/tierlist/index.html",
-    "main.03ac700b.css.map": "/tierlist/static/css/main.03ac700b.css.map",
-    "main.a97d861a.js.map": "/tierlist/static/js/main.a97d861a.js.map",
+    "main.e9ccdba7.css.map": "/tierlist/static/css/main.e9ccdba7.css.map",
+    "main.ee85fe64.js.map": "/tierlist/static/js/main.ee85fe64.js.map",
     "787.38d536dd.chunk.js.map": "/tierlist/static/js/787.38d536dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.03ac700b.css",
-    "static/js/main.a97d861a.js"
+    "static/css/main.e9ccdba7.css",
+    "static/js/main.ee85fe64.js"
   ]
 }
