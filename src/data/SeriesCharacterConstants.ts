@@ -74,9 +74,6 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
     [ESeries.FRIEREN]: ["Frieren", "Fern"],
 }
 
-export const REMAINING_CHARACTERS: string[] = [
-];
-
 const MINOR_CHARACTERS: string[] = [
     // Domestic Girlfriend
     "*Momo Kashiwabara", "*Miu Ashihara", "*Masaki Kobayashi", "*Miyabi Serizawa", "*Misaki Ogura", "*Mao Kinashi", "*Yuri Umeda", "*Fumino Kabasawa", "*Hibiki Mikimoto", "*Kasumi Hazuki", "*Kasumi Hazuki", "*Yūka Kusanagi", "*Hana Sakaki", "*Nene Kuzuoka",

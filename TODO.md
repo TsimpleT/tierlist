@@ -1,3 +1,5 @@
+react-ify / rework the whole thing, maybe diff library
+
 padding/margin of characters
 - whether theres 1 or more rows of characters within the tier
 

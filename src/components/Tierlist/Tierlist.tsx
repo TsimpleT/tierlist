@@ -6,6 +6,8 @@ import styles from "./Tierlist.module.css";
 import { TierName, ALL_TIERS, SERIES_CHARACTERS, ALL_SERIES, CREATE_EMPTY_TIERLIST, TierlistSchema } from '../../data';
 import { Tier } from './Tier';
 
+const OLD_SHEET_LINK = "https://docs.google.com/spreadsheets/d/1QlH4sO5_ExwYWnqgb9Jl35T-xXLLR3xhPEEUyjwVWh4/edit?gid=1864619649#gid=1864619649";
+
 interface IProps {
     // initialTierlist: { [name in TierName]: string[] };
     muuris: {[key: string]: Muuri};
@@ -187,6 +189,7 @@ export class Tierlist extends React.Component<IProps, IState> {
                     <span onClick={this.exportToClipboard}>Export to Clipboard</span>
                     {/* <span onClick={this.importFromClipboard}>Import from Clipboard</span> */}
                     <span onClick={this.showInfo}>Info</span>
+                    <a href={OLD_SHEET_LINK} target="_blank" rel="noreferrer">Old Sheet Link</a>
                 </div>
                 <div className={styles.scroller}>
                     {ALL_TIERS.map((tierName) => <Tier

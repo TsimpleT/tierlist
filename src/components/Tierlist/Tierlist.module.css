@@ -14,12 +14,16 @@
     border-bottom: 1px dimgray solid;
 }
 
-.buttonHeader span {
+.buttonHeader span, a {
     all: unset;
     padding: 4px 8px;
     border: 1px #E0E0CD solid;
-    background-color: #866C93;
+    background-color: #7E648A;
     margin-right: 8px;
+}
+
+.buttonHeader span:hover, a:hover {
+    background-color: #967CA3;
 }
 
 .scroller {
