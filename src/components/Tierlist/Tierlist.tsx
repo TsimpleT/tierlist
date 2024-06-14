@@ -3,7 +3,7 @@ import Muuri, { Item } from 'muuri';
 import copy from 'copy-to-clipboard';
 import styles from "./Tierlist.module.css";
 
-import { TierName, ALL_TIERS, SERIES_CHARACTERS, ALL_SERIES, CREATE_EMPTY_TIERLIST, TierlistSchema } from '../../data';
+import { TierName, ALL_TIERS, SERIES_CHARACTERS, ALL_SERIES, CREATE_EMPTY_TIERLIST, TierlistSchema, ImageUtil, EImageIcon } from '../../data';
 import { Tier } from './Tier';
 
 const OLD_SHEET_LINK = "https://docs.google.com/spreadsheets/d/1QlH4sO5_ExwYWnqgb9Jl35T-xXLLR3xhPEEUyjwVWh4/edit?gid=1864619649#gid=1864619649";
@@ -179,18 +179,35 @@ export class Tierlist extends React.Component<IProps, IState> {
         }
     }*/
 
-    private showInfo = (): void => {
-        window.alert("Your tierlist does NOT auto-save, you must \"Export to Clipboard\" and save it to a file and/or send it to TsimpleT.\n\nNEXT UPDATE:\n- Character requests\n- Home page with everyone's tierlists and an averaged tierlist.\n\nUPCOMING UPDATES:\n- Starting from a saved tierlist instead of from scratch.\n- Search by anime/character\n\nSuggestions/requests for improvements/characters/series are welcome!");
+    private showImportantInfo = (): void => {
+        window.alert("Your tierlist does NOT auto-save, you must \"Export to Clipboard\" and save it to a file and/or send it to TsimpleT\n\nHover over anything to see what a button does or who the character is");
+    }
+    
+    private recentlyAdded = (): void => {
+        window.alert("RECENTLY ADDED:\n- Anime when you hover over a character\n- More characters!");
+    }
+
+    private comingSoon = (): void => {
+        window.alert("NEXT MAJOR UPDATE:\n- Home page with everyone's tierlists and an averaged tierlist\n- Character requests (almost always adding more)\n\nFUTURE UPDATES:\n- Starting from a saved tierlist instead of from scratch\n- Search by anime/character\n\nSuggestions/requests for improvements/characters/series are welcome!");
     }
 
     public render(): React.ReactNode {
         return (
             <div className={styles.container}>
                 <div className={styles.buttonHeader}>
-                    <span onClick={this.exportToClipboard}>Export to Clipboard</span>
+                    <img src={ImageUtil.getIconImage(EImageIcon.COPY_TO_CLIPBOARD)} title={"Export to Clipboard"} alt={"Export to Clipboard"}
+                        className={styles.imageButton} onClick={this.exportToClipboard} height={20}/>
                     {/* <span onClick={this.importFromClipboard}>Import from Clipboard</span> */}
-                    <span onClick={this.showInfo}>Info</span>
-                    <a href={OLD_SHEET_LINK} target="_blank" rel="noreferrer">Old Sheet Link</a>
+                    <img src={ImageUtil.getIconImage(EImageIcon.INFO)} title={"Show Important Info"} alt={"Show Important Info"}
+                        className={styles.imageButton} onClick={this.showImportantInfo} height={20}/>
+                    <img src={ImageUtil.getIconImage(EImageIcon.UPDATE_NOTES)} title={"Update Notes"} alt={"Update Notes"}
+                        className={styles.imageButton} onClick={this.recentlyAdded} height={20}/>
+                    <img src={ImageUtil.getIconImage(EImageIcon.COMING_SOON)} title={"Coming Soon"} alt={"Coming Soon"}
+                        className={styles.imageButton} onClick={this.comingSoon} height={20}/>
+                    <a href={OLD_SHEET_LINK} target="_blank" rel="noreferrer" className={styles.linkImageButton} >
+                        <img src={ImageUtil.getIconImage(EImageIcon.GOOGLE_SHEET)} title={"Link to Old Tierlist Sheet"} alt={"Link to Old Tierlist Sheet"}
+                        height={20} />
+                    </a>
                 </div>
                 <div className={styles.scroller}>
                     {ALL_TIERS.map((tierName) => <Tier

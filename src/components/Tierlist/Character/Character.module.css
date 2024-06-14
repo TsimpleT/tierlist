@@ -3,7 +3,7 @@
     /* width: 100px;
     height: 100px;
     line-height: 100px; */
-    margin: 5px 5px 0 5px;
+    margin: 2px 2px 0 2px;
     z-index: 1;
 }
 
@@ -15,6 +15,16 @@
 }
 .item.muuri-item-dragging {
     z-index: 3;
+}
+
+.itemContent {
+    border: 1px var(--bg-default) solid;
+    padding: 2px 2px 0 2px;
+}
+
+.itemContent:hover {
+    background-color: #967CA3;
+    border: 1px #967CA3 solid;
 }
 
 /* .character {
