@@ -65,11 +65,11 @@ export class Tierlist extends React.Component<IProps, IState> {
 
     private createRemoveListener(fromTierName: TierName): (data: Item) => void {
         return (data: Item): void => {
-            const character: string|undefined|null = data.getElement()?.children[0].children[0].getAttribute("title");
-            if(character === undefined || character === null) {
-                console.debug("Character remove from tier failed", data);
-                return;
-            }
+            // const character: string|undefined|null = data.getElement()?.children[0].children[0].getAttribute("title");
+            // if(character === undefined || character === null) {
+            //     console.debug("Character remove from tier failed", data);
+            //     return;
+            // }
             // const toTierName = CLASSNAME_TO_TIERNAME(data.getGrid()?.getElement().classList[0]);
             // console.log(character, "from", TIERNAME_TO_STRING(fromTierName)/*, "to", TIERNAME_TO_STRING(toTierName)*/);
             this.updateTier(fromTierName);
@@ -78,11 +78,11 @@ export class Tierlist extends React.Component<IProps, IState> {
 
     private createAddListener(toTierName: TierName): (data: Item) => void {
         return (data: Item): void => {
-            const character: string|undefined|null = data.getElement()?.children[0].children[0].getAttribute("alt");
-            if(character === undefined || character === null) {
-                console.debug("Character add to tier failed", data);
-                return;
-            }
+            // const character: string|undefined|null = data.getElement()?.children[0].children[0].getAttribute("alt");
+            // if(character === undefined || character === null) {
+            //     console.debug("Character add to tier failed", data);
+            //     return;
+            // }
             // console.log(character, "to", TIERNAME_TO_STRING(fromTierName));
             this.updateTier(toTierName);
         }
@@ -99,6 +99,7 @@ export class Tierlist extends React.Component<IProps, IState> {
                     console.error("no title in child img");
                     break;
                 }
+                char = char.substring(0, char.indexOf("(")-1);
 
                 let styleStr: string|null = children[i].getAttribute("style");
                 if(!styleStr) {

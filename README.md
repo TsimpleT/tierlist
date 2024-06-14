@@ -1,3 +1,5 @@
 `npm start`
-`npm run deploy -- -m "deploy #1"`
+
+`npm run deploy -- -m "[X.X.X] msg"`
+
 https://tsimplet.github.io/tierlist/

@@ -8,3 +8,9 @@ remount muuris w/o refresh
 remove Tierlist.componentDidMount setTimeout
 
 cant select tier letters
+
+favicon: yor, fern, mai, rem, zero/two, asuka (evangalion), asuna
+
+character img size options
+
+series enum to strings

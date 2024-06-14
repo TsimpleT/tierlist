@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from "./Character.module.css";
+import { ESeries, GET_SERIES_FOR_CHARACTER } from '../../../data';
 
 interface IProps {
     character: string;
@@ -13,7 +14,7 @@ export class Character extends React.Component<IProps> {
                     <img
                         src={require(`../../../assets/characters/${this.props.character}.png`)}
                         alt={this.props.character}
-                        title={this.props.character}
+                        title={`${this.props.character} (${ESeries[GET_SERIES_FOR_CHARACTER(this.props.character)]})`}
                         width={35}
                         height={35}
                     />
