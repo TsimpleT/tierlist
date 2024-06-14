@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tierlist/static/css/main.e9ccdba7.css",
-    "main.js": "/tierlist/static/js/main.c04b8de1.js",
+    "main.css": "/tierlist/static/css/main.49c80eff.css",
+    "main.js": "/tierlist/static/js/main.98e1113d.js",
     "static/js/787.38d536dd.chunk.js": "/tierlist/static/js/787.38d536dd.chunk.js",
     "static/media/Faputa.png": "/tierlist/static/media/Faputa.c83e71a7bb1cc00f8e86.png",
     "static/media/Claire Francois.png": "/tierlist/static/media/Claire Francois.2c8efa0fbab2580cac58.png",
@@ -318,6 +318,7 @@
     "static/media/Omega.png": "/tierlist/static/media/Omega.4a80121c85ebda5694a3.png",
     "static/media/Moeko Sekine.png": "/tierlist/static/media/Moeko Sekine.ac607579cb6d96a93769.png",
     "static/media/Miu Ashihara.png": "/tierlist/static/media/Miu Ashihara.26d13558d0203411b6c0.png",
+    "static/media/Nanachi.png": "/tierlist/static/media/Nanachi.539f9adaa3d4d134cdb4.png",
     "static/media/Gabi Braun.png": "/tierlist/static/media/Gabi Braun.386592826fd770038fd8.png",
     "static/media/Anastasia Hoshin.png": "/tierlist/static/media/Anastasia Hoshin.1606295c5a938c4a775f.png",
     "static/media/Urushi Yaotome.png": "/tierlist/static/media/Urushi Yaotome.ebbdf51c16d3ceb74aaa.png",
@@ -391,12 +392,12 @@
     "static/media/Kasumi Hazuki.png": "/tierlist/static/media/Kasumi Hazuki.cb88305551f86314d27b.png",
     "static/media/Quanxi.png": "/tierlist/static/media/Quanxi.2b0e9fdadf493db5fae4.png",
     "index.html": "/tierlist/index.html",
-    "main.e9ccdba7.css.map": "/tierlist/static/css/main.e9ccdba7.css.map",
-    "main.c04b8de1.js.map": "/tierlist/static/js/main.c04b8de1.js.map",
+    "main.49c80eff.css.map": "/tierlist/static/css/main.49c80eff.css.map",
+    "main.98e1113d.js.map": "/tierlist/static/js/main.98e1113d.js.map",
     "787.38d536dd.chunk.js.map": "/tierlist/static/js/787.38d536dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e9ccdba7.css",
-    "static/js/main.c04b8de1.js"
+    "static/css/main.49c80eff.css",
+    "static/js/main.98e1113d.js"
   ]
 }
