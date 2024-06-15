@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tierlist/static/css/main.327427a1.css",
-    "main.js": "/tierlist/static/js/main.d81bce21.js",
+    "main.css": "/tierlist/static/css/main.985e4609.css",
+    "main.js": "/tierlist/static/js/main.c17c7986.js",
     "static/js/787.38d536dd.chunk.js": "/tierlist/static/js/787.38d536dd.chunk.js",
     "static/media/Faputa.png": "/tierlist/static/media/Faputa.c83e71a7bb1cc00f8e86.png",
     "static/media/Claire Francois.png": "/tierlist/static/media/Claire Francois.2c8efa0fbab2580cac58.png",
@@ -380,6 +380,7 @@
     "static/media/Fortuna.png": "/tierlist/static/media/Fortuna.13cb4bccf8588edfb551.png",
     "static/media/Abiko Samejima.png": "/tierlist/static/media/Abiko Samejima.69ba462c418554b08766.png",
     "static/media/Tsubame Koyasu.png": "/tierlist/static/media/Tsubame Koyasu.961ba8594595576f180b.png",
+    "static/media/Home.png": "/tierlist/static/media/Home.d4c4e5987ab24128b607.png",
     "static/media/Nagisa Kashiwagi.png": "/tierlist/static/media/Nagisa Kashiwagi.7025fc74cbf55e6c81da.png",
     "static/media/Hibiki Mikimoto.png": "/tierlist/static/media/Hibiki Mikimoto.9da3da6ead39c302b3c4.png",
     "static/media/Maki Shijo.png": "/tierlist/static/media/Maki Shijo.51a11667f2677c745f09.png",
@@ -392,12 +393,12 @@
     "static/media/Misaki Ogura.png": "/tierlist/static/media/Misaki Ogura.93ef04edbdab824f6d10.png",
     "static/media/Kasumi Hazuki.png": "/tierlist/static/media/Kasumi Hazuki.cb88305551f86314d27b.png",
     "index.html": "/tierlist/index.html",
-    "main.327427a1.css.map": "/tierlist/static/css/main.327427a1.css.map",
-    "main.d81bce21.js.map": "/tierlist/static/js/main.d81bce21.js.map",
+    "main.985e4609.css.map": "/tierlist/static/css/main.985e4609.css.map",
+    "main.c17c7986.js.map": "/tierlist/static/js/main.c17c7986.js.map",
     "787.38d536dd.chunk.js.map": "/tierlist/static/js/787.38d536dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.327427a1.css",
-    "static/js/main.d81bce21.js"
+    "static/css/main.985e4609.css",
+    "static/js/main.c17c7986.js"
   ]
 }
