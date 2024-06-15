@@ -1,7 +1,7 @@
 import React from 'react';
 import Muuri from 'muuri';
 
-import { TierName, ALL_TIERS, DEV_STRING_PRE } from '../data';
+import { ALL_TIERS, DEV_STRING_PRE, VIEW_ONLY_TIERS } from '../data';
 import { TierlistViewer } from './Tierlist/TierlistViewer';
 import { TierlistCreator } from './Tierlist/TierlistCreator';
 
@@ -30,7 +30,7 @@ export class TierlistApp extends React.Component<IProps, IState> {
         document.title = `${DEV_STRING_PRE}${editType} Best Girl Tierlist`;
         console.log(`TierlistApp(${editType}) MOUNT`);
         for(let n in ALL_TIERS) {
-            if(this.props.canEdit || (ALL_TIERS[n] !== TierName.UR && ALL_TIERS[n] !== TierName.DW)) {
+            if(this.props.canEdit || VIEW_ONLY_TIERS.includes(ALL_TIERS[n])) {
                 const muuriName = `.tier${n}`;
                 if(!this.muuris[muuriName]) {
                     this.muuris[muuriName] = new Muuri(muuriName, {

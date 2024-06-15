@@ -4,6 +4,7 @@ import styles from "./HomeApp.module.css";
 
 import { GET_SAVED_USERNAMES } from '../data/savedTierlists';
 import { Link } from 'react-router-dom';
+import { DEV_STRING_PRE, VIEW_ONLY_TIERS } from '../data';
 
 interface IProps {}
 interface IState {}
@@ -18,16 +19,15 @@ export class HomeApp extends React.Component<IProps, IState> {
     public override componentDidMount(): void {
         document.title = `Best Girl Tierlist`;
         console.log(`HomeApp MOUNT`);
-        // for(let n in ALL_TIERS) {
-        //     if(ALL_TIERS[n] !== TierName.UR && ALL_TIERS[n] !== TierName.DW) {
-        //         const muuriName = `.tier${n}`;
-        //         if(!this.muuris[muuriName]) {
-        //             this.muuris[muuriName] = new Muuri(muuriName, {
-        //                 dragEnabled: false,
-        //                 dragContainer: document.body,
-        //                 dragSort: () => Object.values(this.muuris)
-        //             });
-        //         }
+        document.title = `${DEV_STRING_PRE}Best Girl Tierlist`;
+        // for(let n in VIEW_ONLY_TIERS) {
+        //     const muuriName = `.tier${n}`;
+        //     if(!this.muuris[muuriName]) {
+        //         this.muuris[muuriName] = new Muuri(muuriName, {
+        //             dragEnabled: false,
+        //             dragContainer: document.body,
+        //             dragSort: () => Object.values(this.muuris)
+        //         });
         //     }
         // }
     }

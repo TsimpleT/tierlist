@@ -2,7 +2,7 @@ import React from 'react';
 import Muuri from 'muuri';
 import styles from "./Tierlist.module.css";
 
-import { TierName, ALL_TIERS, CREATE_EMPTY_TIERLIST, TierlistSchema, ImageUtil, EImageIcon, ITierlist, NUMBER_TO_TIERNAME } from '../../data';
+import { TierName, CREATE_EMPTY_TIERLIST, TierlistSchema, ImageUtil, EImageIcon, ITierlist, NUMBER_TO_TIERNAME, VIEW_ONLY_TIERS } from '../../data';
 import { Tier } from './Tier';
 import { GET_SAVED_ITIERLIST, GET_SAVED_USERNAMES } from '../../data/savedTierlists';
 
@@ -114,7 +114,7 @@ export class TierlistViewer extends React.Component<IProps, IState> {
                     </a>
                 </div>
                 <div className={styles.scroller}>
-                    {ALL_TIERS.filter((tierName) => (tierName !== TierName.UR && tierName !== TierName.DW)).map((tierName) => <Tier
+                    {VIEW_ONLY_TIERS.map((tierName) => <Tier
                         tierName={tierName}
                         characters={this.tierlist[tierName]}
                         key={tierName}

@@ -18,6 +18,15 @@ export const ALL_TIERS: TierName[] = [
     TierName.UR, TierName.DW
 ];
 
+export const VIEW_ONLY_TIERS: TierName[] = [
+    TierName.Z,
+    TierName.Sp, TierName.S, TierName.Sm,
+    TierName.Ap, TierName.A, TierName.Am,
+    TierName.Bp, TierName.B, TierName.Bm,
+    TierName.Cp, TierName.C, TierName.Cm,
+    TierName.D, TierName.F
+];
+
 const TIERNAME_TO_STRING_DICT: {[key in TierName]: string } = {
     [TierName.Z]: "Z",
     [TierName.Sp]: "S+", [TierName.S]: "S", [TierName.Sm]: "S-",
@@ -56,9 +65,6 @@ const NUMBER_TO_TIERNAME_DICT: {[key: number]: TierName} = {
 }
 
 export function NUMBER_TO_TIERNAME(key: number): TierName {
-    if(!key) {
-        return TierName.UR;
-    }
     if(key in NUMBER_TO_TIERNAME_DICT) {
         return NUMBER_TO_TIERNAME_DICT[key];
     }
