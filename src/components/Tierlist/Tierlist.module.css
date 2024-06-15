@@ -9,6 +9,10 @@
     border: 1px dimgray solid;
 }
 
+.userTitle {
+    padding-right: 6px;
+}
+
 .buttonHeader {
     padding: 6px 8px 4px;
     border-bottom: 1px dimgray solid;

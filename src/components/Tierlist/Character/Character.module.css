@@ -22,7 +22,7 @@
     padding: 2px 2px 0 2px;
 }
 
-.itemContent:hover {
+.itemContentHover:hover {
     background-color: #967CA3;
     border: 1px #967CA3 solid;
 }

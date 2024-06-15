@@ -9,6 +9,10 @@ remove Tierlist.componentDidMount setTimeout
 
 cant select tier letters
 
-favicon: yor, fern, mai, rem, zero/two, asuka (evangalion), asuna
+favicon: yor, fern, mai, rem, zerotwo, asuka (evangalion), asuna
 
 character img size options
+
+fix url routing
+- use /:username
+- direct urls dont work, only clicking links in the site

@@ -3,15 +3,15 @@ import Muuri, { Item } from 'muuri';
 import copy from 'copy-to-clipboard';
 import styles from "./Tierlist.module.css";
 
-import { TierName, ALL_TIERS, SERIES_CHARACTERS, ALL_SERIES, CREATE_EMPTY_TIERLIST, TierlistSchema, ImageUtil, EImageIcon } from '../../data';
+import { TierName, ALL_TIERS, SERIES_CHARACTERS, ALL_SERIES, CREATE_EMPTY_TIERLIST, TierlistSchema, ImageUtil, EImageIcon, ITierlist, NUMBER_TO_TIERNAME } from '../../data';
 import { Tier } from './Tier';
+import { GET_SAVED_ITIERLIST, GET_SAVED_USERNAMES } from '../../data/savedTierlists';
 
 const OLD_SHEET_LINK = "https://docs.google.com/spreadsheets/d/1QlH4sO5_ExwYWnqgb9Jl35T-xXLLR3xhPEEUyjwVWh4/edit?gid=1864619649#gid=1864619649";
 
 interface IProps {
-    // initialTierlist: { [name in TierName]: string[] };
     muuris: {[key: string]: Muuri};
-    test: (tierlist: { [name in TierName]: string[] }) => void;
+    username: string;
 }
 
 interface IState {
@@ -24,25 +24,47 @@ interface CharacterAndTransform {
     transformY: number;
 };
 
-export class Tierlist extends React.Component<IProps, IState> {
+export class TierlistCreator extends React.Component<IProps, IState> {
     private removeListenerDict: {[key: string]: (data: Item) => void} = {};
     private addListenerDict: {[key: string]: (data: Item) => void} = {};
 
     public constructor(props: IProps) {
         super(props);
-        this.state = {
-            tierlist: CREATE_EMPTY_TIERLIST()
-        }
-        for(let series of ALL_SERIES) {
-            for(let char of SERIES_CHARACTERS[series]) {
-                this.state.tierlist[TierName.UR].push(char);
+        let tierlist = CREATE_EMPTY_TIERLIST();
+        if(GET_SAVED_USERNAMES().includes(this.props.username)) {
+            const itierlist: ITierlist = GET_SAVED_ITIERLIST(this.props.username);
+            let characterAddedDict: {[key: string]: boolean} = {};
+            if(itierlist.tierlistSchema === TierlistSchema.V0) {
+                for(let tier in itierlist.tierlist) {
+                    tierlist[NUMBER_TO_TIERNAME(+tier)] = itierlist.tierlist[tier];
+                    for(let char of itierlist.tierlist[tier]) {
+                        characterAddedDict[char] = true;
+                    }
+                }
+            } else {
+                throw Error(`Unsupported tierlistSchema ${itierlist.tierlistSchema}`);
+            }
+            for(let series of ALL_SERIES) {
+                for(let char of SERIES_CHARACTERS[series]) {
+                    if(!(char in characterAddedDict)) {
+                        tierlist[TierName.UR].push(char);
+                    }
+                }
+            }
+        } else {
+            
+            for(let series of ALL_SERIES) {
+                for(let char of SERIES_CHARACTERS[series]) {
+                    tierlist[TierName.UR].push(char);
+                }
             }
         }
+        this.state = { tierlist: tierlist }
     }
 
     public override componentDidMount(): void {
         setTimeout(() => {
-            console.log("TL MOUNT timeout");
+            console.log("TierlistCreator MOUNT (in timeout)");
             for(let tierName of ALL_TIERS) {
                 const muuriName = `.tier${tierName}`;
 
@@ -70,7 +92,7 @@ export class Tierlist extends React.Component<IProps, IState> {
             //     console.debug("Character remove from tier failed", data);
             //     return;
             // }
-            // const toTierName = CLASSNAME_TO_TIERNAME(data.getGrid()?.getElement().classList[0]);
+            // const toTierName = CLASSNAME_TO_TIERNAME(data.getGrid()?.getElement().classList[0].substring(4));
             // console.log(character, "from", TIERNAME_TO_STRING(fromTierName)/*, "to", TIERNAME_TO_STRING(toTierName)*/);
             this.updateTier(fromTierName);
         }
@@ -195,6 +217,7 @@ export class Tierlist extends React.Component<IProps, IState> {
         return (
             <div className={styles.container}>
                 <div className={styles.buttonHeader}>
+                    <span className={styles.userTitle}>{`creating tierlist`}</span>
                     <img src={ImageUtil.getIconImage(EImageIcon.COPY_TO_CLIPBOARD)} title={"Export to Clipboard"} alt={"Export to Clipboard"}
                         className={styles.imageButton} onClick={this.exportToClipboard} height={20}/>
                     {/* <span onClick={this.importFromClipboard}>Import from Clipboard</span> */}
@@ -215,6 +238,7 @@ export class Tierlist extends React.Component<IProps, IState> {
                         characters={this.state.tierlist[tierName]}
                         key={tierName}
                         id={`tier${tierName}`}
+                        canEdit={true}
                     />)}
                 </div>
             </div>

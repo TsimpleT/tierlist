@@ -1,4 +1,6 @@
-export const tierlist = {
+import { ITierlist } from "../TierlistConstants";
+
+export const tsimplet: ITierlist = {
     "username": "TsimpleT",
     "tierlistSchema": "0.1.0",
     "tierlist": {
@@ -94,7 +96,7 @@ export const tierlist = {
             "Hahari Hanazono",
             "Latla Mirah",
             "Rika Hoshizaki",
-            "null = Fiona Frost",
+            "Fiona Frost",
             "Himeno",
             "Yuzuriha",
             "Seika Ijichi",
@@ -125,7 +127,7 @@ export const tierlist = {
             "Mami Nanami",
             "Arika Yamamoto",
             "Shizuka Yoshimoto",
-            "Kikyou Kushida"
+            "Kikyo Kushida"
         ],
         "12": [],
         "13": [],

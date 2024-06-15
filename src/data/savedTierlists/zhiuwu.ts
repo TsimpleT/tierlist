@@ -1,4 +1,4 @@
-export const tierlist = {
+export const zhiuwu = {
     "username": "zhiuwu",
     "tierlistSchema": "0.1.0",
     "tierlist": {
@@ -115,7 +115,7 @@ export const tierlist = {
             "Shiori Ssakurazaka",
             "Rem",
             "Nagisa Minase",
-            "Kikyou Kushida",
+            "Kikyo Kushida",
             "Kei Karuizawa",
             "Suzune Horikita",
             "Rika Hoshizaki",

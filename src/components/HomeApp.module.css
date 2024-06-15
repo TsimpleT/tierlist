@@ -1,0 +1,4 @@
+.text {
+    color: var(--text-default);
+    padding-right: 8px;
+}

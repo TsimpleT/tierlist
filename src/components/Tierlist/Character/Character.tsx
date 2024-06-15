@@ -4,13 +4,14 @@ import { GET_SERIES_FOR_CHARACTER } from '../../../data';
 
 interface IProps {
     character: string;
+    canEdit: boolean;
 }
 
 export class Character extends React.Component<IProps> {
     public render(): React.ReactNode {
         return (
             <div className={styles.item}>
-                <div className={styles.itemContent}>
+                <div className={`${styles.itemContent} ${this.props.canEdit && styles.itemContentHover}`}>
                     <img
                         src={require(`../../../assets/characters/${this.props.character}.png`)}
                         alt={this.props.character}

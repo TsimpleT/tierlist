@@ -4,6 +4,7 @@ export enum EImageIcon {
     GOOGLE_SHEET = "GoogleSheet",
     UPDATE_NOTES = "UpdateNotes",
     COMING_SOON = "ComingSoon",
+    HOME = "Home",
 }
 
 class ImageUtil {

@@ -9,6 +9,7 @@ interface IProps {
     tierName: TierName;
     characters: string[];
     id: string;
+    canEdit: boolean;
 }
 
 const getColor = (tier: TierName) => styles[`tier${tier}`];
@@ -26,7 +27,7 @@ export class Tier extends React.Component<IProps> {
                 {/* keep tierX at beginning */}
                 <div className={`tier${tierName} ${styles.tierCharacters}`} id={`tierCharacters${tierName}`}>
                     {this.props.characters.map((char) =>
-                        <Character character={char} key={char} />
+                        <Character character={char} key={char} canEdit={this.props.canEdit}/>
                     )}
                 </div>
             </div>

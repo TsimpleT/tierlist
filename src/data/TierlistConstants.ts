@@ -35,32 +35,32 @@ export function TIERNAME_TO_STRING(tierName: TierName): string {
     return "Unranked";
 }
 
-const CLASSNAME_TO_TIERNAME_DICT: {[key: string]: TierName} = {
-    "tier0": TierName.Z,
-    "tier1": TierName.Sp,
-    "tier2": TierName.S,
-    "tier3": TierName.Sm,
-    "tier4": TierName.Ap,
-    "tier5": TierName.A,
-    "tier6": TierName.Am,
-    "tier7": TierName.Bp,
-    "tier8": TierName.B,
-    "tier9": TierName.Bm,
-    "tier10": TierName.Cp,
-    "tier11": TierName.C,
-    "tier12": TierName.Cm,
-    "tier13": TierName.D,
-    "tier14": TierName.F,
-    "tier15": TierName.UR,
-    "tier16": TierName.DW
+const NUMBER_TO_TIERNAME_DICT: {[key: number]: TierName} = {
+    0: TierName.Z,
+    1: TierName.Sp,
+    2: TierName.S,
+    3: TierName.Sm,
+    4: TierName.Ap,
+    5: TierName.A,
+    6: TierName.Am,
+    7: TierName.Bp,
+    8: TierName.B,
+    9: TierName.Bm,
+    10: TierName.Cp,
+    11: TierName.C,
+    12: TierName.Cm,
+    13: TierName.D,
+    14: TierName.F,
+    15: TierName.UR,
+    16: TierName.DW
 }
 
-export function CLASSNAME_TO_TIERNAME(className?: string): TierName {
-    if(!className) {
+export function NUMBER_TO_TIERNAME(key: number): TierName {
+    if(!key) {
         return TierName.UR;
     }
-    if(className in CLASSNAME_TO_TIERNAME_DICT) {
-        return CLASSNAME_TO_TIERNAME_DICT[className];
+    if(key in NUMBER_TO_TIERNAME_DICT) {
+        return NUMBER_TO_TIERNAME_DICT[key];
     }
     return TierName.UR;
 }
@@ -87,4 +87,10 @@ const EMPTY_TIERLIST: {[tierName in TierName]: string[]} = {
 
 export function CREATE_EMPTY_TIERLIST<T = string[]>(): {[tierName in TierName]: T} {
     return JSON.parse(JSON.stringify(EMPTY_TIERLIST));
+}
+
+export interface ITierlist {
+    "username": string;
+    "tierlistSchema": string;
+    "tierlist": {[key: string]: string[]};
 }
