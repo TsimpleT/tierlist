@@ -95,8 +95,11 @@ export function CREATE_EMPTY_TIERLIST<T = string[]>(): {[tierName in TierName]: 
     return JSON.parse(JSON.stringify(EMPTY_TIERLIST));
 }
 
+type TierlistSchema = "0.1.0";
+
 export interface ITierlist {
-    "username": string;
-    "tierlistSchema": string;
-    "tierlist": {[key: string]: string[]};
+    username: string;
+    tierlistSchema: TierlistSchema;
+    lastUpdated: string;
+    tierlist: {[key: string]: string[]};
 }

@@ -6,13 +6,6 @@
     /* overflow: hidden; */
 }
 
-.tierBottom {
-    display: flex;
-    /* flex-direction: row; */
-    width: 100%;
-    /* overflow: hidden; */
-}
-
 .tierText {
     color: white;
     font-family: "Roboto", sans-serif;
@@ -26,6 +19,14 @@
     /* text-align: center; */
     border-right: 1px dimgray solid;
 }
+
+.tierZ { background-color: var(--bg-gold-1); }
+.tierS { background-color: var(--bg-gold-2); }
+.tierA  { background-color: var(--bg-green); }
+.tierB  { background-color: var(--bg-blue); }
+.tierC  { background-color: var(--bg-red-1); }
+.tierD { background-color: var(--bg-red-2); }
+.tierF { background-color: var(--bg-black); }
 
 .tierCharacters {
     display: flex;

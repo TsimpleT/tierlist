@@ -8,7 +8,7 @@ export enum ESeries {
     CSM = "Chainsaw Man",
     MASHLE = "Mashle: Magic and Muscles",
     AKIBA_MAID_WAR = "Akiba Maid War",
-    RASCAL = "Rascal Does Not Dream of ...",
+    RASCAL = "Rascal Does Not Dream of...",
     JJK = "Jujutsu Kaisen",
     RENT_A_GF = "Rent-a-Girlfriend",
     BOCCHI = "Bocchi the Rock!",
@@ -78,6 +78,7 @@ export enum ESeries {
     YAMADA_999 = "My Love Story with Yamada-kun at Lv999",
     PROMISED_NEVERLAND = "The Promised Neverland",
     AYUMU_SHOGI = "When Will Ayumu Make His Move?",
+    KAKEGURUI = "Kakegurui",
 };
 
 export const ALL_SERIES: ESeries[] = [
@@ -89,7 +90,7 @@ export const ALL_SERIES: ESeries[] = [
     ESeries.KIMIZERO, ESeries.KOMI_SAN, ESeries.KONOSUBA, ESeries.DURARARA, ESeries.HORIMIYA, ESeries.HIGEHIRO,
     ESeries.TONIKAWA, ESeries.KONGMING, ESeries.NAGI_ASU, ESeries.EMINENCE, ESeries.ART_CLUB,
     ESeries.DOME_KANO, ESeries.RENT_A_GF, ESeries._100_KANO, ESeries.SPY_X_FAM, ESeries.YURU_CAMP,
-    ESeries.KAMIKATSU, ESeries.KIZNAIVER, ESeries.MAID_SAMA, ESeries.YOUR_NAME,
+    ESeries.KAMIKATSU, ESeries.KIZNAIVER, ESeries.MAID_SAMA, ESeries.YOUR_NAME, ESeries.KAKEGURUI,
     ESeries.FUUFU_IJOU, ESeries.MONOGATARI, ESeries.FAIRY_TAIL, ESeries.SOUL_EATER, ESeries.FIRE_FORCE,
     ESeries.DEATH_NOTE, ESeries.TAKAGI_SAN, ESeries.YAMADA_999, ESeries.APOTHECARY,
     ESeries.KAGUYA_SAMA, ESeries.GOLDEN_TIME, ESeries.SAILOR_MOON, ESeries.AYUMU_SHOGI, ESeries.EDGERUNNERS,
@@ -125,7 +126,7 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
     [ESeries.ONK]: ["Ai Hoshino", "Ruby Hoshino", "Kana Arima", "Akane Kurokawa", "MEM-cho", "Miyako Saitou",
         "Frill Shiranui", "Abiko Samejima", "Yoriko Kichijouji", "Minami Kotobuki"], // thru S2; *
     [ESeries.QUINTS]: ["Ichika Nakano", "Nino Nakano", "Miku Nakano", "Yotsuba Nakano", "Itsuki Nakano"],
-    [ESeries.CSM]: ["Reze", "Makima", "Power", "Himeno", "Pochita", "Kobeni Higashiyama", "Quanxi", "Nayuta", "Asa Mitaka"], // *
+    [ESeries.CSM]: ["Reze", "Makima", "Power", "Himeno", "Pochita", "Kobeni Higashiyama", "Quanxi", "Nayuta", "Asa Mitaka", "Fami"], // *
     [ESeries.MASHLE]: ["Lemon Irvine", "Love Cute", "Anna Crown"], // thru S2
     [ESeries.AKIBA_MAID_WAR]: ["Nagomi Wahira", "Ranko Mannen", "Zoya", "Yume Hiiragi", "Shino Gotou", "Yasuko Yaegashi", "Okachimachi"], // *
     [ESeries.RASCAL]: ["Mai Sakurajima", "Rio Futaba", "Tomoe Koga", "Nodoka Toyohama", "Kaede Azusagawa", "Shouko Makinohara"], // thru Sister Venturing Out
@@ -208,6 +209,8 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
     [ESeries.YAMADA_999]: ["Akane Kinoshita", "Runa Sasaki", "Momoko Maeda", "Yukari Tsubaki"],
     [ESeries.PROMISED_NEVERLAND]: [], // skipping
     [ESeries.AYUMU_SHOGI]: ["Urushi Yaotome", "Sakurako Mikage", "Maki", "Rin Kagawa"],
+    [ESeries.KAKEGURUI]: ["Yumeko Jabami", "Mary Saotome", "Sayaka Igarashi", "Midari Ikishima", "Kirari Momobami", "Yuriko Nishinotouin", "Itsuki Sumeragi",
+        "Runa Yomozuki", "Ririka Momobami", "Yumemi Yumemite", "Nanami Tsubomi"],
 }
 
 const CHARACTER_SERIES_DICT: {[key: string]: ESeries} = {};
@@ -225,16 +228,16 @@ export function GET_SERIES_FOR_CHARACTER(char: string): ESeries {
 }
 
 const MINOR_CHARACTERS: string[] = [
-    "*Yura Katayose", // Oshi no Ko
-    "*Raiha Uesugi", // Quintessential Quintuplets
-    "*Uzuki Hirokawa", // Bunny Girl Senpai
-    "*Sachi Takamiya", "*Natsumi Oohashi", "*Mei Hamano", // Fuufu Ijou
-    "*Ymir", // AoT
-    "*Akari Tanikita", // Kimizero
-    "*Rikekuma", // Science Fell in Love
-    "*Risa Hoshizaki", // Girlfriend, Girlfriend
-    "*Kami-sama", // 100 Girlfriends
-    "*Anya Forger", "*Becky Blackbell", "*Camilla", "*Millie", "*Sharon", // SPY x FAMILY
+    "Yura Katayose", // Oshi no Ko
+    "Raiha Uesugi", // Quintessential Quintuplets
+    "Uzuki Hirokawa", // Bunny Girl Senpai
+    "Sachi Takamiya", "Natsumi Oohashi", "Mei Hamano", // Fuufu Ijou
+    "Ymir", // AoT
+    "Akari Tanikita", // Kimizero
+    "Rikekuma", // Science Fell in Love
+    "Risa Hoshizaki", // Girlfriend, Girlfriend
+    "Kami-sama", // 100 Girlfriends
+    "Anya Forger", "Becky Blackbell", "Camilla", "Millie", "Sharon", // SPY x FAMILY
     "Kaguya Gekkou", "Yaiba Shirogane", "Haru Miyako", "..." // TONIKAWA
 ];
 

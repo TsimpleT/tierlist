@@ -1,0 +1,17 @@
+.container {
+    padding-top: 32px; /* +24 for AppNav */
+}
+
+.row {
+    padding-left: 8px;
+    margin-top: 8px;
+}
+
+.margin {
+    margin-right: 8px;
+}
+
+.colorAndMargin {
+    color: var(--text-default);
+    padding-right: 8px;
+}

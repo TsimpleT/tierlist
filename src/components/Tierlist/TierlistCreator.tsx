@@ -3,11 +3,9 @@ import Muuri, { Item } from 'muuri';
 import copy from 'copy-to-clipboard';
 import styles from "./Tierlist.module.css";
 
-import { TierName, ALL_TIERS, SERIES_CHARACTERS, ALL_SERIES, CREATE_EMPTY_TIERLIST, TierlistSchema, ImageUtil, EImageIcon, ITierlist, NUMBER_TO_TIERNAME } from '../../data';
 import { Tier } from './Tier';
-import { GET_SAVED_ITIERLIST, GET_SAVED_USERNAMES } from '../../data/savedTierlists';
-
-const OLD_SHEET_LINK = "https://docs.google.com/spreadsheets/d/1QlH4sO5_ExwYWnqgb9Jl35T-xXLLR3xhPEEUyjwVWh4/edit?gid=1864619649#gid=1864619649";
+import { SERIES_CHARACTERS, ALL_SERIES, ImageUtil, EImageIcon, GET_SAVED_ITIERLIST, GET_SAVED_USERNAMES } from '../../data';
+import { TierName, ALL_TIERS, CREATE_EMPTY_TIERLIST, ITierlist, NUMBER_TO_TIERNAME } from '../../data/TierlistConstants';
 
 interface IProps {
     muuris: {[key: string]: Muuri};
@@ -34,7 +32,7 @@ export class TierlistCreator extends React.Component<IProps, IState> {
         if(GET_SAVED_USERNAMES().includes(this.props.username)) {
             const itierlist: ITierlist = GET_SAVED_ITIERLIST(this.props.username);
             let characterAddedDict: {[key: string]: boolean} = {};
-            if(itierlist.tierlistSchema === TierlistSchema.V0) {
+            if(itierlist.tierlistSchema === "0.1.0") {
                 for(let tier in itierlist.tierlist) {
                     tierlist[NUMBER_TO_TIERNAME(+tier)] = itierlist.tierlist[tier];
                     for(let char of itierlist.tierlist[tier]) {
@@ -52,7 +50,6 @@ export class TierlistCreator extends React.Component<IProps, IState> {
                 }
             }
         } else {
-            
             for(let series of ALL_SERIES) {
                 for(let char of SERIES_CHARACTERS[series]) {
                     tierlist[TierName.UR].push(char);
@@ -133,7 +130,7 @@ export class TierlistCreator extends React.Component<IProps, IState> {
                     console.error("no 'transform: ' in style str");
                     break;
                 }
-                const transformStr = styleStr.substring(transformIdx+11, styleStr.indexOf(";", transformIdx));
+                const transformStr: string = styleStr.substring(transformIdx+11, styleStr.indexOf(";", transformIdx));
                 const translateXIdx: number = transformStr.indexOf("translateX(");
                 const translateYIdx: number = transformStr.indexOf("translateY(");
 
@@ -157,7 +154,8 @@ export class TierlistCreator extends React.Component<IProps, IState> {
         // console.log(this.state.tierlist);
         const copyData = {
             username: "TODO",
-            tierlistSchema: TierlistSchema.V0,
+            tierlistSchema: "0.1.0",
+            lastUpdated: "TODO",
             tierlist: this.state.tierlist
         };
         copy(JSON.stringify(
@@ -173,64 +171,13 @@ export class TierlistCreator extends React.Component<IProps, IState> {
         window.alert("Tierlist copied. Please paste it in a document and send it to tsimplet.");
     }
 
-    /*private importFromClipboard = (): void => {
-        let text = window.prompt("Paste the tierlist.");
-        if(text) {
-            let parsed = JSON.parse(text);
-            console.log(parsed);
-            let charStatusDict: {[key: string]: boolean} = {};
-            for(let tierName of ALL_TIERS) {
-                if(tierName in parsed) {
-                    for(let char of parsed[tierName]) {
-                        charStatusDict[char] = true;
-                        this.state.tierlist[tierName].push(char);
-                    }
-                }
-            }
-            for(let series of ALL_SERIES) {
-                for(let char of SERIES_CHARACTERS[series]) {
-                    if(!(char in charStatusDict)) {
-                        this.state.tierlist[TierName.UR].push(char);
-                    }
-                }
-            }
-            // console.log();
-            
-            this.props.test(this.state.tierlist);
-            // console.log(this.state.tierlist);
-        }
-    }*/
-
-    private showImportantInfo = (): void => {
-        window.alert("Your tierlist does NOT auto-save, you must \"Export to Clipboard\" and save it to a file and/or send it to TsimpleT\n\nHover over anything to see what a button does or who the character is");
-    }
-    
-    private recentlyAdded = (): void => {
-        window.alert("RECENTLY ADDED:\n- Anime when you hover over a character\n- More characters!");
-    }
-
-    private comingSoon = (): void => {
-        window.alert("NEXT MAJOR UPDATE:\n- Home page with everyone's tierlists and an averaged tierlist\n- Character requests (almost always adding more)\n\nFUTURE UPDATES:\n- Starting from a saved tierlist instead of from scratch\n- Search by anime/character\n\nSuggestions/requests for improvements/characters/series are welcome!");
-    }
-
     public render(): React.ReactNode {
         return (
             <div className={styles.container}>
                 <div className={styles.buttonHeader}>
-                    <span className={styles.userTitle}>{`creating tierlist`}</span>
                     <img src={ImageUtil.getIconImage(EImageIcon.COPY_TO_CLIPBOARD)} title={"Export to Clipboard"} alt={"Export to Clipboard"}
-                        className={styles.imageButton} onClick={this.exportToClipboard} height={20}/>
-                    {/* <span onClick={this.importFromClipboard}>Import from Clipboard</span> */}
-                    <img src={ImageUtil.getIconImage(EImageIcon.INFO)} title={"Show Important Info"} alt={"Show Important Info"}
-                        className={styles.imageButton} onClick={this.showImportantInfo} height={20}/>
-                    <img src={ImageUtil.getIconImage(EImageIcon.UPDATE_NOTES)} title={"Update Notes"} alt={"Update Notes"}
-                        className={styles.imageButton} onClick={this.recentlyAdded} height={20}/>
-                    <img src={ImageUtil.getIconImage(EImageIcon.COMING_SOON)} title={"Coming Soon"} alt={"Coming Soon"}
-                        className={styles.imageButton} onClick={this.comingSoon} height={20}/>
-                    <a href={OLD_SHEET_LINK} target="_blank" rel="noreferrer" className={styles.linkImageButton} >
-                        <img src={ImageUtil.getIconImage(EImageIcon.GOOGLE_SHEET)} title={"Link to Old Tierlist Sheet"} alt={"Link to Old Tierlist Sheet"}
-                        height={20} />
-                    </a>
+                        className={styles.imageButton} onClick={this.exportToClipboard} height={16}/>
+                    <span className={styles.userTitle}>{`← Copy and Export tierlist`}</span>
                 </div>
                 <div className={styles.scroller}>
                     {ALL_TIERS.map((tierName) => <Tier

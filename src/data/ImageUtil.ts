@@ -1,10 +1,17 @@
+import { GET_AGGREGATE_FAVORITE_CHARACTER } from "./SavedTierlists";
+
 export enum EImageIcon {
+    AGGREGATE_BEST_GIRL = "ABG",
+    MENU = "Menu",
+    TIERLIST = "Tierlist", // unused atm
+    HOME = "Home", // unused atm
     COPY_TO_CLIPBOARD = "Copy",
-    INFO = "Info",
+    INFO = "Info", // unused atm
+    WARNING = "Warning",
     GOOGLE_SHEET = "GoogleSheet",
     UPDATE_NOTES = "UpdateNotes",
     COMING_SOON = "ComingSoon",
-    HOME = "Home",
+    CREATE_NEW = "CreateNew",
 }
 
 class ImageUtil {
@@ -19,7 +26,9 @@ class ImageUtil {
         if(icon in this.imageMap) {
             return this.imageMap[icon];
         }
-        const loadImage = require(`../assets/icons/${icon}.png`);
+        const loadImage = (icon === EImageIcon.AGGREGATE_BEST_GIRL)
+            ? require(`../assets/characters/${GET_AGGREGATE_FAVORITE_CHARACTER()}.png`)
+            : require(`../assets/icons/${icon}.png`);
         this.imageMap[icon] = loadImage;
         return loadImage;
     }

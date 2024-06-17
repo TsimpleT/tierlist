@@ -15,4 +15,10 @@ character img size options
 
 fix url routing
 - use /:username
-- direct urls dont work, only clicking links in the site
+- on live/github, direct urls dont work, only clicking links in the site
+
+aggregate tierlist: within each tier, a vertical bar to separate decimals
+
+separate out util from data, and make SavedTierlists a singleton
+
+remove commented code

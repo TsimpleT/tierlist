@@ -1,6 +1,9 @@
-export const zhiuwu = {
-    "username": "zhiuwu",
+import { ITierlist } from "../TierlistConstants";
+
+export const zhiuwu: ITierlist = {
+    "username": "Zhiuwu",
     "tierlistSchema": "0.1.0",
+    "lastUpdated": "Jun 15, 2024",
     "tierlist": {
         "0": [
             "Hitagi Senjougahara",
