@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tierlist/static/css/main.cf125def.css",
-    "main.js": "/tierlist/static/js/main.45b700b0.js",
+    "main.js": "/tierlist/static/js/main.725c947d.js",
     "static/js/787.38d536dd.chunk.js": "/tierlist/static/js/787.38d536dd.chunk.js",
     "static/media/Faputa.png": "/tierlist/static/media/Faputa.c83e71a7bb1cc00f8e86.png",
     "static/media/Claire Francois.png": "/tierlist/static/media/Claire Francois.2c8efa0fbab2580cac58.png",
@@ -181,7 +181,6 @@
     "static/media/No.664.png": "/tierlist/static/media/No.664.8853450f0a772d7657ce.png",
     "static/media/Serie.png": "/tierlist/static/media/Serie.ae0878d704d88cb795d3.png",
     "static/media/Hiyori Shiina.png": "/tierlist/static/media/Hiyori Shiina.ef8ff74d8241c0eb8d95.png",
-    "static/media/Maomao.png": "/tierlist/static/media/Maomao.08e9386272612fbc14df.png",
     "static/media/Funifura.png": "/tierlist/static/media/Funifura.a1c9af8dd90c9683765d.png",
     "static/media/Ilulu.png": "/tierlist/static/media/Ilulu.690f9676113a4a557281.png",
     "static/media/Makima.png": "/tierlist/static/media/Makima.6911266695ef05beb783.png",
@@ -304,6 +303,7 @@
     "static/media/Kei Shirogane.png": "/tierlist/static/media/Kei Shirogane.4829499a7f4f88401832.png",
     "static/media/Kikuri Hiroi.png": "/tierlist/static/media/Kikuri Hiroi.eda182966e2f2c5aad8b.png",
     "static/media/Rena.png": "/tierlist/static/media/Rena.9a9e698af18e6cb0e87f.png",
+    "static/media/Maomao.png": "/tierlist/static/media/Maomao.bc06566e90b447193f09.png",
     "static/media/Kojuurou Shuri.png": "/tierlist/static/media/Kojuurou Shuri.63a1d0af3ae238c0b7aa.png",
     "static/media/Sylvia.png": "/tierlist/static/media/Sylvia.419279f98353a987bb49.png",
     "static/media/Ah-Duo.png": "/tierlist/static/media/Ah-Duo.623a370cbe9cd1bc96f7.png",
@@ -406,11 +406,11 @@
     "static/media/Kasumi Hazuki.png": "/tierlist/static/media/Kasumi Hazuki.cb88305551f86314d27b.png",
     "index.html": "/tierlist/index.html",
     "main.cf125def.css.map": "/tierlist/static/css/main.cf125def.css.map",
-    "main.45b700b0.js.map": "/tierlist/static/js/main.45b700b0.js.map",
+    "main.725c947d.js.map": "/tierlist/static/js/main.725c947d.js.map",
     "787.38d536dd.chunk.js.map": "/tierlist/static/js/787.38d536dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf125def.css",
-    "static/js/main.45b700b0.js"
+    "static/js/main.725c947d.js"
   ]
 }
