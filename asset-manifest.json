@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tierlist/static/css/main.cf125def.css",
-    "main.js": "/tierlist/static/js/main.725c947d.js",
+    "main.js": "/tierlist/static/js/main.f7e52ea1.js",
     "static/js/787.38d536dd.chunk.js": "/tierlist/static/js/787.38d536dd.chunk.js",
     "static/media/Faputa.png": "/tierlist/static/media/Faputa.c83e71a7bb1cc00f8e86.png",
     "static/media/Claire Francois.png": "/tierlist/static/media/Claire Francois.2c8efa0fbab2580cac58.png",
@@ -406,11 +406,11 @@
     "static/media/Kasumi Hazuki.png": "/tierlist/static/media/Kasumi Hazuki.cb88305551f86314d27b.png",
     "index.html": "/tierlist/index.html",
     "main.cf125def.css.map": "/tierlist/static/css/main.cf125def.css.map",
-    "main.725c947d.js.map": "/tierlist/static/js/main.725c947d.js.map",
+    "main.f7e52ea1.js.map": "/tierlist/static/js/main.f7e52ea1.js.map",
     "787.38d536dd.chunk.js.map": "/tierlist/static/js/787.38d536dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.cf125def.css",
-    "static/js/main.725c947d.js"
+    "static/js/main.f7e52ea1.js"
   ]
 }
