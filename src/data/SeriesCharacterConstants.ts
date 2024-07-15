@@ -79,36 +79,70 @@ export enum ESeries {
     PROMISED_NEVERLAND = "The Promised Neverland",
     AYUMU_SHOGI = "When Will Ayumu Make His Move?",
     KAKEGURUI = "Kakegurui",
+    SAO = "Sword Art Online",
+    SHANGRI_LA = "Shangri-La Frontier",
+    TALENTLESS_NANA = "Talentless Nana",
+    BALANCE_UNLIMITED = "The Millionaire Detective - Balance: UNLIMITED",
+    UNDEAD_MURDER_FARCE = "Undead Murder Farce",
+    SOLO_LEVELING = "Solo Leveling",
+    GOD_OF_HS = "The God of High School",
+    LOVE_AFTER_WORLD_DOM = "Love After World Domination",
+    VEXATIONS = "The Vexations of a Shut-In Vampire Princess",
+    TOWER_OF_GOD = "Tower of God",
+    MOBSEKA = "Trapped in a Dating Sim: The World of Otome Games Is Tough for Mobs",
+    MATO_SEIHEI = "Mato Seihei no Slave",
+    DAL = "Date A Live",
+    EROMANGA = "Eromanga Sensei",
+    HOKKAIDO = "Hokkaido Gals Are Super Adorable!",
+    ANGEL_DANCE_DEVIL = "The Foolish Angel Dances with the Devil",
+    DREAMING_BOY = "The Dreaming Boy is a Realist",
+    SAEKANO = "Saekano: How to Raise a Boring Girlfriend",
+    ROSARIO_VAMPIRE = "Rosario + Vampire",
+    OUR_RAINY_PROTOCOL = "Our Rainy Protocol",
+    OSAMAKE = "Osamake: Romcom Where The Childhood Friend Won't Lose",
+    MAMAHAHA = "My Stepmom's Daughter is My Ex",
+    DARLING_IN_THE_FRANXX = "DARLING in the FRANXX",
+    STEINS_GATE = "Steins;Gate",
+    SPICE_AND_WOLF = "Spice and Wolf",
+    NIER = "NieR:Automata",
+    FATE = "Fate",
+    OP = "One Piece",
+    HS_DXD = "High School DxD",
+    // YUGIOH = "", // pot of greed
 };
 
 export const ALL_SERIES: ESeries[] = [
-    ESeries.AOT, ESeries.CSM, ESeries.JJK, ESeries.ONK,
-    ESeries.COTE,
+    ESeries.OP,
+    ESeries.AOT, ESeries.CSM, ESeries.JJK, ESeries.ONK, ESeries.SAO, ESeries.DAL,
+    ESeries.COTE, ESeries.NIER, ESeries.FATE,
     ESeries.GF_GF,
-    ESeries.MASHLE, ESeries.REZERO, ESeries.RELIFE, ESeries.QUINTS, ESeries.RASCAL, ESeries.BOCCHI,
-    ESeries.BLEND_S, ESeries.ZOM_100, ESeries.FRIEREN, ESeries.WOTAKOI,
-    ESeries.KIMIZERO, ESeries.KOMI_SAN, ESeries.KONOSUBA, ESeries.DURARARA, ESeries.HORIMIYA, ESeries.HIGEHIRO,
-    ESeries.TONIKAWA, ESeries.KONGMING, ESeries.NAGI_ASU, ESeries.EMINENCE, ESeries.ART_CLUB,
-    ESeries.DOME_KANO, ESeries.RENT_A_GF, ESeries._100_KANO, ESeries.SPY_X_FAM, ESeries.YURU_CAMP,
-    ESeries.KAMIKATSU, ESeries.KIZNAIVER, ESeries.MAID_SAMA, ESeries.YOUR_NAME, ESeries.KAKEGURUI,
+    ESeries.MASHLE, ESeries.REZERO, ESeries.RELIFE, ESeries.QUINTS, ESeries.RASCAL, ESeries.BOCCHI, ESeries.HS_DXD,
+    ESeries.BLEND_S, ESeries.ZOM_100, ESeries.FRIEREN, ESeries.WOTAKOI, ESeries.MOBSEKA, ESeries.SAEKANO, ESeries.OSAMAKE,
+    ESeries.KIMIZERO, ESeries.KOMI_SAN, ESeries.KONOSUBA, ESeries.DURARARA, ESeries.HORIMIYA, ESeries.HIGEHIRO, ESeries.TONIKAWA,
+    ESeries.KONGMING, ESeries.NAGI_ASU, ESeries.EMINENCE, ESeries.ART_CLUB, ESeries.EROMANGA, ESeries.HOKKAIDO, ESeries.MAMAHAHA,
+    ESeries.DOME_KANO, ESeries.RENT_A_GF, ESeries._100_KANO, ESeries.SPY_X_FAM,
+    ESeries.YURU_CAMP, ESeries.KAMIKATSU, ESeries.KIZNAIVER, ESeries.MAID_SAMA,
+    ESeries.YOUR_NAME, ESeries.KAKEGURUI, ESeries.GOD_OF_HS, ESeries.VEXATIONS,
     ESeries.FUUFU_IJOU, ESeries.MONOGATARI, ESeries.FAIRY_TAIL, ESeries.SOUL_EATER, ESeries.FIRE_FORCE,
-    ESeries.DEATH_NOTE, ESeries.TAKAGI_SAN, ESeries.YAMADA_999, ESeries.APOTHECARY,
-    ESeries.KAGUYA_SAMA, ESeries.GOLDEN_TIME, ESeries.SAILOR_MOON, ESeries.AYUMU_SHOGI, ESeries.EDGERUNNERS,
-    ESeries.TOMOZAKI_KUN, ESeries.COWBOY_BEBOP, ESeries.BLACK_LAGOON, ESeries.MASAMUNE_KUN,
-    ESeries.UNDEAD_UNLUCK, ESeries.KOBAYASHI_SAN, ESeries.MADE_IN_ABYSS, ESeries.JUN_MOCHIZUKI,
-    ESeries.HELLS_PARADISE, ESeries.TOMO_CHAN, ESeries.MUSHOKU_TENSEI, ESeries.AKIBA_MAID_WAR,
-    ESeries.ANGEL_NEXT_DOOR, ESeries.ROMANTIC_KILLER, ESeries.MICHIKO_HATCHIN,
+    ESeries.DEATH_NOTE, ESeries.TAKAGI_SAN, ESeries.YAMADA_999, ESeries.APOTHECARY, ESeries.SHANGRI_LA,
+    ESeries.KAGUYA_SAMA, ESeries.GOLDEN_TIME, ESeries.SAILOR_MOON, ESeries.AYUMU_SHOGI,
+    ESeries.EDGERUNNERS, ESeries.MATO_SEIHEI, ESeries.STEINS_GATE,
+    ESeries.TOMOZAKI_KUN, ESeries.COWBOY_BEBOP, ESeries.BLACK_LAGOON, ESeries.MASAMUNE_KUN, ESeries.TOWER_OF_GOD, ESeries.DREAMING_BOY,
+    ESeries.UNDEAD_UNLUCK, ESeries.KOBAYASHI_SAN, ESeries.MADE_IN_ABYSS, ESeries.JUN_MOCHIZUKI, ESeries.SOLO_LEVELING,
+    ESeries.HELLS_PARADISE, ESeries.TOMO_CHAN, ESeries.MUSHOKU_TENSEI, ESeries.AKIBA_MAID_WAR, ESeries.SPICE_AND_WOLF,
+    ESeries.ANGEL_NEXT_DOOR, ESeries.ROMANTIC_KILLER, ESeries.MICHIKO_HATCHIN, ESeries.TALENTLESS_NANA, ESeries.ROSARIO_VAMPIRE,
     ESeries.DRESS_UP_DARLING,
-    ESeries.VIOLET_EVERGARDEN,
+    ESeries.VIOLET_EVERGARDEN, ESeries.BALANCE_UNLIMITED, ESeries.ANGEL_DANCE_DEVIL,
     ESeries.SENPAI_IS_ANNOYING, ESeries.TSUREZURE_CHILDREN, ESeries.TO_EVERY_YOU_TO_ME,
-    ESeries.PROMISED_NEVERLAND, ESeries.YAKUZA_BABYSITTING,
-    ESeries.DANGERS_IN_MY_HEART,
-    ESeries.SCIENCE_FELL_IN_LOVE, ESeries.IN_LOVE_W_VILLAINESS, 
+    ESeries.PROMISED_NEVERLAND, ESeries.YAKUZA_BABYSITTING, ESeries.OUR_RAINY_PROTOCOL,
+    ESeries.DANGERS_IN_MY_HEART, ESeries.UNDEAD_MURDER_FARCE,
+    ESeries.SCIENCE_FELL_IN_LOVE, ESeries.IN_LOVE_W_VILLAINESS, ESeries.LOVE_AFTER_WORLD_DOM,
+    ESeries.DARLING_IN_THE_FRANXX,
     ESeries.ASSASSINATION_CLASSROOM, ESeries.CANT_UNDERSTAND_HUSBAND,
 ];
 
 export enum ECode {
-    NEXT_LINE = "0"
+    WITHIN_TIER_BREAK = "0"
 }
 
 const eSeriesNames = Object.keys(ESeries);
@@ -118,7 +152,7 @@ if(eSeriesNames.length-2 !== ALL_SERIES.length) { // -2 bc ESeries has ESeries.C
 
 export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
     [ESeries.NONE]: [],
-    [ESeries.CODES]: [ECode.NEXT_LINE],
+    [ESeries.CODES]: [ECode.WITHIN_TIER_BREAK],
     [ESeries.DOME_KANO]: ["Rui Tachibana", "Hina Tachibana", "Momo Kashiwabara", "Miu Ashihara", "Masaki Kobayashi", "Miyabi Serizawa",
         "Misaki Ogura", "Mao Kinashi", "Yuri Umeda", "Hibiki Mikimoto", "Kasumi Hazuki", "Hana Sakaki", "Nene Kuzuoka"], // *
     [ESeries.KAGUYA_SAMA]: ["Kaguya Shinomiya", "Ai Hayasaka", "Chika Fujiwara", "Miko Iino", "Tsubame Koyasu",
@@ -162,7 +196,7 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
         "Ai Morishita", "Yuki Himeno", "Takeko Nishino"], // thru yr2 vol11
     [ESeries.UNDEAD_UNLUCK]: ["Fuuko Izumo", "Gina Chamber", "Juiz", "Latla Mirah"], // thru s1
     [ESeries.FRIEREN]: ["Frieren", "Fern", "Flamme", "Aura", "Serie", "Laufen", "Ubel", "Lawine", "Kanne", "Sense", "Methode"], // *
-    [ESeries.MONOGATARI]: ["Hitagi Senjougahara", "Kiss-Shot Acerola-Orion Heart-Under-Blade", "Kanbaru Suruga"], // ?
+    [ESeries.MONOGATARI]: ["Hitagi Senjougahara", "Kiss-Shot Acerola-Orion Heart-Under-Blade", "Kanbaru Suruga", "Shinobu Oshino"], // ?
     [ESeries.KONOSUBA]: ["Aqua", "Darkness", "Megumin", "Yunyun", "Wiz", "Luna", "Eris", "Chomusuke", "Sylvia", "Soketto", "Funifura", "Arue", "Dodonko"], // thru movie; *
     [ESeries.YURU_CAMP]: ["Aoi Inuyama", "Chiaki Oogaki", "Ena Saitou", "Rin Shima", "Nadeshiko Kagamihara"], // ?
     [ESeries.VIOLET_EVERGARDEN]: ["Violet Evergarden"], // ?
@@ -170,7 +204,7 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
     [ESeries.KAMIKATSU]: ["Aruraru", "Atar", "Dakini", "Gaia", "Mitama", "Rishu", "Shiruriru"],
     [ESeries.MADE_IN_ABYSS]: ["Faputa", "Nanachi"], // ?
     [ESeries.COWBOY_BEBOP]: ["Faye Valentine"], // ?
-    [ESeries.MUSHOKU_TENSEI]: ["Ghislaine Dedoldia"], // ?
+    [ESeries.MUSHOKU_TENSEI]: ["Roxy Migurdia", "Sylphiette", "Eris Boreas Greyrat", "Lilia", "Elinalise Dragonroad", "Ghislaine Dedoldia", "Linia Dedoldia", "Pursena Adoldia"], // thru s2p2
     [ESeries.JUN_MOCHIZUKI]: ["Jeanne"], // ?
     [ESeries.FAIRY_TAIL]: ["Juvia", "Mirajane Strauss"], // ?
     [ESeries.WOTAKOI]: ["Hanako Koyanagi", "Narumi Momose"], // ?
@@ -211,6 +245,41 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
     [ESeries.AYUMU_SHOGI]: ["Urushi Yaotome", "Sakurako Mikage", "Maki", "Rin Kagawa"],
     [ESeries.KAKEGURUI]: ["Yumeko Jabami", "Mary Saotome", "Sayaka Igarashi", "Midari Ikishima", "Kirari Momobami", "Yuriko Nishinotouin", "Itsuki Sumeragi",
         "Runa Yomozuki", "Ririka Momobami", "Yumemi Yumemite", "Nanami Tsubomi"],
+    [ESeries.SAO]: ["Yuuki Asuna"],
+    [ESeries.SHANGRI_LA]: ["Rei Saiga", "Towa Amane", "Kei Uomi", ],
+    [ESeries.TALENTLESS_NANA]: [], // skipping
+    [ESeries.BALANCE_UNLIMITED]: ["Suzue Kambe"],
+    [ESeries.UNDEAD_MURDER_FARCE]: ["Aya Rindou", "Shizuku Hasei"],
+    [ESeries.SOLO_LEVELING]: ["Lee Joohee", "Cha Hae-In"],
+    [ESeries.GOD_OF_HS]: [], // TODO
+    [ESeries.LOVE_AFTER_WORLD_DOM]: ["Desumi Magahara", "Haru Arisugawa", "Misaki Jinguji", "Kiki Majima", "Kyouko Kuroyuri", "Hellko",],
+    [ESeries.VEXATIONS]: ["Terakomari Gandesblood", "Villhaze", "Karen Helvetius", "Sakuna Memoir", "Nelia Cunningham", "Karla Amatsu", "Millicent Bluenight",],
+    [ESeries.TOWER_OF_GOD]: ["Endorsi Jahad", "Hwaryun", "Anaak Jahad", "Yuri Ha", "Black March", "Serena Rinnen", "Paracule",
+        "Yihwa Yeon", "Yeo Miseng", "Yeo Goseng", "Xia Xia", "Yura Ha", "Kaiser", "Lilial Lo Po Bia", "Shilial Jahad", "Aka Williams", "Garam Jahad", "Khun Maschenny Jahad",
+        "Yasratcha", "Nen Neya", "Dowon", "Sophia Tan", "Lefav Lo Po Bia", "Aria"],
+    [ESeries.MOBSEKA]: ["Olivia", "Angelica Rafua Redgrave"],
+    [ESeries.MATO_SEIHEI]: ["Kyouka Uzen", "Shushu Suruga", "Himari Azuma", "Yachiho Azuma", "Nei Ookawamura", "Tenka Izumo", "Sahara Wakasa", "Ren Yamashiro", "Ginna Bizen",
+        "Aoba Wakura", "Koko Zenibako", "Naon Yuno", "Jouryuu", "Shikoku", "Kuusetsu", "Fukuma",
+        "Konomi Tatara", "Varvara Pilipenko", "Yakumo Ezo", "Bell Tsukiyono", "Fubuki Azuma", "Mira Kamiunten", "Maia Azuma", "Megumi Zaha",
+        "Kaiko Itsuki", "Homare Azuma", "Prachi Sherawat", "Jenna Staples"],
+    [ESeries.DAL]: ["Tohka Yatogami", "Origami Tobiichi", "Kotori Itsuka", "Yoshino Himekawa", "Kurumi Tokisaki", "Reine Murasame", "Mana Takamiya",
+        "Kaguya Yamai", "Yuzuru Yamai", "Miku Izayoi", "Mayuri", "Natsumi Kyouno", "Ellen Mathers", "Karen Mathers", "Nia Honjo", "Mukuro Hoshimiya"],
+    [ESeries.EROMANGA]: [], // skipping
+    [ESeries.HOKKAIDO]: ["Minami Fuyuki", "Sayuri Akino", "Rena Natsukawa", "Mai Fuyuki"],
+    [ESeries.ANGEL_DANCE_DEVIL]: ["Lily Amane", "Yuuka Tanahashi", "Liz", "Lilia Amane"],
+    [ESeries.DREAMING_BOY]: ["Aika Natsukawa", "Kei Ashida", "Kaede Sajou", "Rin Shinomiya", "Fuuka Sasaki"],
+    [ESeries.SAEKANO]: ["Megumi Katou", "Eriri Spencer Sawamura", "Utaha Kasumigaoka", "Michiru Hyoudou", "Izumi Hashima", "Akane Kosaka"],
+    [ESeries.ROSARIO_VAMPIRE]: ["Moka Akashiya", "Kurumu Kurono", "Yukari Sendo", "Mizore Shirayuki", "Shizuka Nekonome", "Ririko Kagome"],
+    [ESeries.OUR_RAINY_PROTOCOL]: ["Nozomi Inazuki", "Yu Saegusa"],
+    [ESeries.OSAMAKE]: ["Kuroha Shida", "Shirokusa Kachi", "Maria Momosaka"],
+    [ESeries.MAMAHAHA]: ["Yume Irido", "Isana Higashira", "Akatsuki Minami"],
+    [ESeries.DARLING_IN_THE_FRANXX]: ["Zero Two"], // BGA
+    [ESeries.STEINS_GATE]: ["Kurisu Makise"], // BGA
+    [ESeries.SPICE_AND_WOLF]: ["Holo"], // BGA
+    [ESeries.NIER]: ["2B"], // BGA
+    [ESeries.FATE]: ["Rin Tohsaka", "Saber"], // BGA
+    [ESeries.OP]: ["Nami"], // BGA
+    [ESeries.HS_DXD]: ["Rias Gremory"], // BGA
 }
 
 const CHARACTER_SERIES_DICT: {[key: string]: ESeries} = {};
@@ -219,6 +288,8 @@ for(let series of ALL_SERIES) {
         CHARACTER_SERIES_DICT[char] = series;
     }
 }
+export const TOTAL_CHARACTERS = Object.keys(CHARACTER_SERIES_DICT).length;
+console.log(TOTAL_CHARACTERS);
 
 export function GET_SERIES_FOR_CHARACTER(char: string): ESeries {
     if(char in CHARACTER_SERIES_DICT) {
@@ -227,7 +298,7 @@ export function GET_SERIES_FOR_CHARACTER(char: string): ESeries {
     return ESeries.NONE;
 }
 
-const MINOR_CHARACTERS: string[] = [
+/*const MINOR_CHARACTERS: string[] = [
     "Yura Katayose", // Oshi no Ko
     "Raiha Uesugi", // Quintessential Quintuplets
     "Uzuki Hirokawa", // Bunny Girl Senpai
@@ -239,7 +310,7 @@ const MINOR_CHARACTERS: string[] = [
     "Kami-sama", // 100 Girlfriends
     "Anya Forger", "Becky Blackbell", "Camilla", "Millie", "Sharon", // SPY x FAMILY
     "Kaguya Gekkou", "Yaiba Shirogane", "Haru Miyako", "..." // TONIKAWA
-];
+];*/
 
 export const NICKNAMES: {[nickname: string]: string} = {
     "bocchi": "Hitori Gotou",

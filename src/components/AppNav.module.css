@@ -10,6 +10,14 @@
     /* align-items: center; */
 }
 
+.title {
+    float: left;
+    font-weight: 600;
+    font-size: large;
+    margin-top: 1px;
+    margin-right: 6px;
+}
+
 .homeButton {
     float: left;
     padding: 2px;
@@ -22,14 +30,6 @@
 
 .homeButton:hover {
     background-color: #7E648A;
-}
-
-.title {
-    float: left;
-    font-weight: 600;
-    font-size: large;
-    margin-top: 1px;
-    margin-right: 6px;
 }
 
 .version {

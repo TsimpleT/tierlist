@@ -1,6 +1,8 @@
 import { CREATE_EMPTY_TIERLIST, ITierlist, NUMBER_TO_TIERNAME, TIERNAME_TO_STRING, TierName, VIEW_ONLY_TIERS } from "../TierlistConstants";
 import { tsimplet } from "./tsimplet";
 import { zhiuwu } from "./zhiuwu";
+import { jamerr102030 } from "./jamerr102030";
+import { meechy } from "./meechy";
 
 export const AGGREGATE_TIERLIST_MIN_VOTES = 2;
 
@@ -37,9 +39,9 @@ class UserTierEntries {
         const delta: number = tierAvg - Math.round(tierAvg);
         const ratingStr: string = (
             (delta > 0)
-                ? `[+${delta.toFixed(3)}]: Ratings averaged ${delta} tiers worse than this tier.`
+                ? `[+${delta.toFixed(3)}]: Ratings averaged ${delta.toFixed(3)} tiers worse than this tier.`
                 : (delta < 0)
-                    ? `[${delta.toFixed(3)}]: Ratings averaged ${-delta} tiers better than this tier.`
+                    ? `[${delta.toFixed(3)}]: Ratings averaged ${-delta.toFixed(3)} tiers better than this tier.`
                     : "(0.000): Ratings averaged exactly into this tier."
         );
         return `\n${ratingStr}\n` + this.entries.map((entry) => `${entry.username}: ${TIERNAME_TO_STRING(entry.tiername)}`).join("\n")
@@ -78,6 +80,8 @@ function addTierlist(itierlist: ITierlist): void {
 
 addTierlist(tsimplet);
 addTierlist(zhiuwu);
+addTierlist(jamerr102030);
+addTierlist(meechy);
 
 let aggregateDecimalTierlist: {[key: number]: string[]} = {};
 for(let char in userTierEntriesDict) {

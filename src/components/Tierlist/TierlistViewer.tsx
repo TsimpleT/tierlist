@@ -58,7 +58,7 @@ export class TierlistViewer extends React.Component<IProps> {
                             key={tierName}
                             id={`tier${tierName}`}
                             canEdit={false}
-                            showVoting={true}
+                            showVoting={this.props.setup.type === "aggregate"}
                         />
                     )}
                 </div>

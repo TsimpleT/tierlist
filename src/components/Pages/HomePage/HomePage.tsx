@@ -12,8 +12,6 @@ export class HomePage extends React.Component {
     public render(): React.ReactNode {
         return (
             <div className={styles.container}>
-                <span>^^^^^ click</span>
-                <br />
                 <span>Home Page is under construction</span>
             </div>
         );

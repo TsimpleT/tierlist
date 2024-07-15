@@ -1,12 +1,13 @@
 :root {
     --bg-default: #3D3143;
     --text-default: #E0E0CD;
-    --bg-gold-1: #C8A800;
-    --bg-gold-2: #A87000;
-    --bg-green: #007000;
-    --bg-blue: #0000C0;
-    --bg-red-1: #A00000;
-    --bg-red-2: #600000;
+    --bg-red: #b10c22;
+    --bg-orange: #d38842;
+    --bg-yellow: #b4b217;
+    --bg-green: #1d8640;
+    --bg-blue: #217ea3;
+    --bg-indigo: #732dce;
+    --bg-violet: #bd4dd3;
     --bg-black: #080808;
 }
 

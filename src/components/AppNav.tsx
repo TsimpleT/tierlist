@@ -13,13 +13,15 @@ function displayUpdateNotes(): void {
 }
 
 function displayComingSoon(): void {
-    window.alert("Coming Soon\n- Making things prettier + Character requests (almost always)\n\nNext Major Feature [beta v4.0]\n- idk might just be [v1.0.0]\n\nFuture Release [v1.0.0]\n- Refactor bootleg things to enable...\n- Search by anime/character + Auto-save via cookies\n\nSuggestions/requests for improvements/characters/series are welcome!");
+    window.alert("Coming Soon\n- Making things prettier + Character requests (almost always)\n\nNext Major Feature [beta v4.0]\n- tournament\n\nFuture Release [v1.0.0]\n- Refactor bootleg things to enable...\n- Search by anime/character + Auto-save via cookies\n\nSuggestions/requests for improvements/characters/series are welcome!");
 }
 
 export class AppNav extends React.Component {
     public render(): React.ReactNode {
         return (
             <nav className={styles.container}>
+                <span className={styles.title}>Best Girl Tierlist</span>
+                <span className={styles.version}>{VERSION_STRING}</span>
                 <Link to={"/tierlist/menu"}>
                     <img src={ImageUtil.getIconImage(EImageIcon.MENU)} className={styles.homeButton} height={20}
                         title={"View/Create Individual Tierlist Menu"} alt={"View/Create Individual Tierlist Menu"} />
@@ -28,10 +30,12 @@ export class AppNav extends React.Component {
                     <img src={ImageUtil.getIconImage(EImageIcon.AGGREGATE_BEST_GIRL)} className={styles.homeButton} height={20}
                         title={"View Aggregate Tierlist"} alt={"View Aggregate Tierlist"} />
                 </Link>
+                {/* <Link to={"/tierlist/tournament"}>
+                    <img src={ImageUtil.getIconImage(EImageIcon.BRACKET)} className={styles.homeButton} height={20}
+                        title={"Play Tournament"} alt={"Play Tournament"} />
+                </Link> */}
                 <img src={ImageUtil.getIconImage(EImageIcon.WARNING)} title={"Show Important Info"} alt={"Show Important Info"}
                     className={styles.imageButton} onClick={showImportantInfo} height={16}/>
-                <span className={styles.title}>Best Girl Tierlist</span>
-                <span className={styles.version}>{VERSION_STRING}</span>
                 <img src={ImageUtil.getIconImage(EImageIcon.UPDATE_NOTES)} title={"Update Notes"} alt={"Update Notes"}
                     className={styles.imageButton} onClick={displayUpdateNotes} height={16}/>
                 <img src={ImageUtil.getIconImage(EImageIcon.COMING_SOON)} title={"Coming Soon"} alt={"Coming Soon"}

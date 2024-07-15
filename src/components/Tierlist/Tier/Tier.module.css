@@ -20,13 +20,13 @@
     border-right: 1px dimgray solid;
 }
 
-.tierZ { background-color: var(--bg-gold-1); }
-.tierS { background-color: var(--bg-gold-2); }
-.tierA  { background-color: var(--bg-green); }
-.tierB  { background-color: var(--bg-blue); }
-.tierC  { background-color: var(--bg-red-1); }
-.tierD { background-color: var(--bg-red-2); }
-.tierF { background-color: var(--bg-black); }
+.tierZ { background-color: var(--bg-violet); }
+.tierS { background-color: var(--bg-indigo); }
+.tierA  { background-color: var(--bg-blue); }
+.tierB  { background-color: var(--bg-green); }
+.tierC  { background-color: var(--bg-yellow); }
+.tierD { background-color: var(--bg-orange); }
+.tierF { background-color: var(--bg-red); }
 
 .tierCharacters {
     display: flex;

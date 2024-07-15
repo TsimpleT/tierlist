@@ -14,7 +14,7 @@ favicon: yor, fern, mai, rem, zerotwo, asuka (evangalion), asuna
 character img size options
 
 fix url routing
-- use /:username
+- use /:username instead of parsing from url
 - on live/github, direct urls dont work, only clicking links in the site
 
 aggregate tierlist: within each tier, a vertical bar to separate decimals
@@ -22,3 +22,5 @@ aggregate tierlist: within each tier, a vertical bar to separate decimals
 separate out util from data, and make SavedTierlists a singleton
 
 remove commented code
+
+colorblind mode

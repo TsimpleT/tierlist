@@ -177,7 +177,7 @@ export class TierlistCreator extends React.Component<IProps, IState> {
                 <div className={styles.buttonHeader}>
                     <img src={ImageUtil.getIconImage(EImageIcon.COPY_TO_CLIPBOARD)} title={"Export to Clipboard"} alt={"Export to Clipboard"}
                         className={styles.imageButton} onClick={this.exportToClipboard} height={16}/>
-                    <span className={styles.userTitle}>{`← Copy and Export tierlist`}</span>
+                    <span className={styles.userTitle}>{`← Copy and Export Tierlist (IMPORTANT: must press and follow instructions or you lose progress)`}</span>
                 </div>
                 <div className={styles.scroller}>
                     {ALL_TIERS.map((tierName) => <Tier
