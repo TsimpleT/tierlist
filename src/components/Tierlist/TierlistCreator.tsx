@@ -25,6 +25,7 @@ interface CharacterAndTransform {
 export class TierlistCreator extends React.Component<IProps, IState> {
     private removeListenerDict: {[key: string]: (data: Item) => void} = {};
     private addListenerDict: {[key: string]: (data: Item) => void} = {};
+    private filterTo?: string;
 
     public constructor(props: IProps) {
         super(props);
@@ -78,6 +79,32 @@ export class TierlistCreator extends React.Component<IProps, IState> {
                 }
                 this.addListenerDict[muuriName] = this.createAddListener(tierName);
                 this.props.muuris[muuriName].on('dragReleaseEnd', this.addListenerDict[muuriName]);
+                
+                // this.props.muuris[muuriName].on('synchronize', () => { console.log("synchronize"); });
+                // this.props.muuris[muuriName].on('layoutStart', (items, isInstant) => { console.log("layoutStart", items, isInstant); });
+                // this.props.muuris[muuriName].on('layoutEnd', (items) => { console.log("layoutEnd", items); });
+                // this.props.muuris[muuriName].on('layoutAbort', (items) => { console.log("layoutAbort", items); });
+                // this.props.muuris[muuriName].on('add', (items) => { console.log("add", items); });
+                // this.props.muuris[muuriName].on('remove', (items, indicies) => { console.log("remove", items, indicies); });
+                // this.props.muuris[muuriName].on('showStart', (items) => { console.log("showStart", items); });
+                // this.props.muuris[muuriName].on('showEnd', (items) => { console.log("showEnd", items); });
+                // this.props.muuris[muuriName].on('hideStart', (items) => { console.log("hideStart", items); });
+                // this.props.muuris[muuriName].on('hideEnd', (items) => { console.log("hideEnd", items); });
+                // this.props.muuris[muuriName].on('filter', (shownItems, hiddenItems) => { console.log("filter", shownItems, hiddenItems); });
+                // this.props.muuris[muuriName].on('sort', (currOrder, prevOrder) => { console.log("sort", currOrder, prevOrder); });
+                // this.props.muuris[muuriName].on('move', (data) => { console.log("move", data); });
+                // this.props.muuris[muuriName].on('send', (data) => { console.log("send", data); });
+                // this.props.muuris[muuriName].on('beforeSend', (data) => { console.log("beforeSend", data); });
+                // this.props.muuris[muuriName].on('receive', (data) => { console.log("receive", data); });
+                // this.props.muuris[muuriName].on('beforeReceive', (data) => { console.log("beforeReceive", data); });
+                // this.props.muuris[muuriName].on('dragInit', (item, event) => { console.log("dragInit", item, event); });
+                // this.props.muuris[muuriName].on('dragStart', (item, event) => { console.log("dragStart", item, event); });
+                // this.props.muuris[muuriName].on('dragMove', (item, event) => { console.log("dragMove", item, event); });
+                // this.props.muuris[muuriName].on('dragScroll', (item, event) => { console.log("dragScroll", item, event); });
+                // this.props.muuris[muuriName].on('dragEnd', (item, event) => { console.log("dragEnd", item, event); });
+                // this.props.muuris[muuriName].on('dragReleaseStart', (data) => { console.log("dragReleaseStart", data); });
+                // this.props.muuris[muuriName].on('dragReleaseEnd', (data) => { console.log("dragReleaseEnd", data); });
+                // this.props.muuris[muuriName].on('destroy', () => { console.log("destroy"); });
             }
         }, 100);
     }
@@ -171,13 +198,42 @@ export class TierlistCreator extends React.Component<IProps, IState> {
         window.alert("Tierlist copied. Please paste it in a document and send it to tsimplet.");
     }
 
+    private viewAllCharacters = () => {
+        for(let tierName of ALL_TIERS) {
+            this.props.muuris[`.tier${tierName}`].filter(() => true);
+        }
+        (document.getElementById("filterInput") as any).value = "";
+    }
+
+    private filterToOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+        this.filterTo = e.currentTarget.value;
+        if(!this.filterTo) {
+            this.viewAllCharacters();
+            return;
+        }
+        for(let tierName of ALL_TIERS) {
+            this.props.muuris[`.tier${tierName}`].filter((item: Item) => {
+                const characterAndSeries: string|undefined|null = item.getElement()?.children[0].children[0].getAttribute("title");
+                if(!characterAndSeries) {
+                    return false;
+                }
+                return (this.filterTo) ? characterAndSeries.substring(0, characterAndSeries.lastIndexOf(")")+1).toLowerCase().includes(this.filterTo.toLowerCase()) : true;
+            });
+        }
+    }
+
     public render(): React.ReactNode {
         return (
             <div className={styles.container}>
                 <div className={styles.buttonHeader}>
                     <img src={ImageUtil.getIconImage(EImageIcon.COPY_TO_CLIPBOARD)} title={"Export to Clipboard"} alt={"Export to Clipboard"}
                         className={styles.imageButton} onClick={this.exportToClipboard} height={16}/>
-                    <span className={styles.userTitle}>{`← Copy and Export Tierlist (IMPORTANT: must press and follow instructions or you lose progress)`}</span>
+                    <span className={styles.userTitle}>{`← IMPORTANT COPY/EXPORT TIERLIST: must press and save or YOU LOSE PROGRESS`}</span>
+                    <span className={styles.filterButton} onClick={this.viewAllCharacters}>View All Characters</span>
+                    <span className={styles.filterButton}>
+                        <span className={styles.filterText}>Filter To</span>
+                        <input className={styles.filterInput} placeholder={"enter series or character"} onChange={this.filterToOnChange} id={"filterInput"} />
+                    </span>
                 </div>
                 <div className={styles.scroller}>
                     {ALL_TIERS.map((tierName) => <Tier

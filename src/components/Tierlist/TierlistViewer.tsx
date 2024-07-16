@@ -1,5 +1,5 @@
 import React from 'react';
-import Muuri from 'muuri';
+import Muuri, { Item } from 'muuri';
 import styles from "./Tierlist.module.css";
 
 import { TierName, CREATE_EMPTY_TIERLIST, ITierlist, NUMBER_TO_TIERNAME, VIEW_ONLY_TIERS } from '../../data/TierlistConstants';
@@ -18,6 +18,7 @@ interface IProps {
 
 export class TierlistViewer extends React.Component<IProps> {
     private tierlist: { [name in TierName]: string[] };
+    private filterTo?: string;
 
     public constructor(props: IProps) {
         super(props);
@@ -39,6 +40,30 @@ export class TierlistViewer extends React.Component<IProps> {
         }
     }
 
+    private viewAllCharacters = () => {
+        for(let tierName of VIEW_ONLY_TIERS) {
+            this.props.muuris[`.tier${tierName}`].filter(() => true);
+        }
+        (document.getElementById("filterInput") as any).value = "";
+    }
+
+    private filterToOnChange = (e: React.FormEvent<HTMLInputElement>) => {
+        this.filterTo = e.currentTarget.value;
+        if(!this.filterTo) {
+            this.viewAllCharacters();
+            return;
+        }
+        for(let tierName of VIEW_ONLY_TIERS) {
+            this.props.muuris[`.tier${tierName}`].filter((item: Item) => {
+                const characterAndSeries: string|undefined|null = item.getElement()?.children[0].children[0].getAttribute("title");
+                if(!characterAndSeries) {
+                    return false;
+                }
+                return (this.filterTo) ? characterAndSeries.substring(0, characterAndSeries.lastIndexOf(")")+1).toLowerCase().includes(this.filterTo.toLowerCase()) : true;
+            });
+        }
+    }
+
     public render(): React.ReactNode {
         const title: string = (
             (this.props.setup.type === "username")
@@ -49,6 +74,11 @@ export class TierlistViewer extends React.Component<IProps> {
             <div className={styles.container}>
                 <div className={styles.buttonHeader}>
                     <span className={styles.userTitle}>{title}</span>
+                    <span className={styles.filterButton} onClick={this.viewAllCharacters}>View All Characters</span>
+                    <span className={styles.filterButton}>
+                        <span className={styles.filterText}>Filter To</span>
+                        <input className={styles.filterInput} placeholder={"enter series or character"} onChange={this.filterToOnChange} id={"filterInput"} />
+                    </span>
                 </div>
                 <div className={styles.scroller}>
                     {VIEW_ONLY_TIERS.map((tierName) => 

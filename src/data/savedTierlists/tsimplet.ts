@@ -3,7 +3,7 @@ import { ITierlist } from "../TierlistConstants";
 export const tsimplet: ITierlist = {
     "username": "TsimpleT",
     "tierlistSchema": "0.1.0",
-    "lastUpdated": "Jul 14, 2024",
+    "lastUpdated": "Jul 15, 2024",
     "tierlist": {
         "0": [
             "Rui Tachibana",
@@ -16,7 +16,8 @@ export const tsimplet: ITierlist = {
             "Minami Nanami",
             "Rena Kariu",
             "Miku Nakano",
-            "Nino Nakano"
+            "Nino Nakano",
+            "Eris Boreas Greyrat"
         ],
         "2": [
             "Kikuri Hiroi",
@@ -26,8 +27,8 @@ export const tsimplet: ITierlist = {
             "Ai Hoshino",
             "Kana Arima",
             "Ruby Hoshino",
-            "Marin Kitagawa",
             "Misaki Ayuzawa",
+            "Marin Kitagawa",
             "Fern",
             "Darkness",
             "Papa Shirogane",
@@ -72,6 +73,7 @@ export const tsimplet: ITierlist = {
             "An Onoya",
             "Beatrice",
             "Kyouko Hori",
+            "Roxy Migurdia",
             "Misuzu Gundou",
             "Ena Ibarada"
         ],
@@ -283,6 +285,7 @@ export const tsimplet: ITierlist = {
             "Anzu Baba"
         ],
         "16": [
+            "Zero Two",
             "Yuuki Asuna",
             "Nami",
             "Nanami Tsubomi",
@@ -330,7 +333,6 @@ export const tsimplet: ITierlist = {
             "Gaia",
             "Rishu",
             "Shiruriru",
-            "Ghislaine Dedoldia",
             "Jeanne",
             "Violet Evergarden",
             "Michiko Malandro"

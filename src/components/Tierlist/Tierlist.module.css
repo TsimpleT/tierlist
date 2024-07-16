@@ -15,6 +15,22 @@
     padding-right: 6px;
 }
 
+.filterButton {
+    margin-right: 6px;
+    padding: 2px 6px;
+    border: 1px white solid;
+    background-color: #302434;
+}
+
+.filterText {
+    padding-right: 6px;
+    border-right: 1px white solid;
+}
+
+.filterInput {
+    margin-left: 6px;
+}
+
 .buttonHeader {
     padding: 6px 8px 4px;
     border-top: 1px dimgray solid;

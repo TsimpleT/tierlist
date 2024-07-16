@@ -13,7 +13,7 @@ function displayUpdateNotes(): void {
 }
 
 function displayComingSoon(): void {
-    window.alert("Coming Soon\n- Making things prettier + Character requests (almost always)\n\nNext Major Feature [beta v4.0]\n- tournament\n\nFuture Release [v1.0.0]\n- Refactor bootleg things to enable...\n- Search by anime/character + Auto-save via cookies\n\nSuggestions/requests for improvements/characters/series are welcome!");
+    window.alert("Coming Soon\n- Making things prettier + Character requests (almost always)\n\nNext Major Feature [beta v4.0]\n- tournament\n\nFuture Release [v1.0.0]\n- Auto-save via cookies\n\nSuggestions/requests for improvements/characters/series are welcome!");
 }
 
 export class AppNav extends React.Component {

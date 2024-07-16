@@ -80,8 +80,8 @@ function addTierlist(itierlist: ITierlist): void {
 
 addTierlist(tsimplet);
 addTierlist(zhiuwu);
-addTierlist(jamerr102030);
 addTierlist(meechy);
+addTierlist(jamerr102030);
 
 let aggregateDecimalTierlist: {[key: number]: string[]} = {};
 for(let char in userTierEntriesDict) {

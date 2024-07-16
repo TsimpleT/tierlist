@@ -7,9 +7,8 @@ import { TierlistCreator, TierlistViewer } from '../../Tierlist';
 interface IProps {
     canEdit: boolean;
 }
-interface IState {}
 
-export class TierlistPage extends React.Component<IProps, IState> {
+export class TierlistPage extends React.Component<IProps> {
     private muuris: {[key: string]: Muuri} = {};
     private username: string;
 
@@ -42,7 +41,7 @@ export class TierlistPage extends React.Component<IProps, IState> {
             }
         }
     }
-
+    
     public render(): React.ReactNode {
         return (
             (this.props.canEdit)
