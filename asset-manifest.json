@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tierlist/static/css/main.cc030bcc.css",
-    "main.js": "/tierlist/static/js/main.e86ff389.js",
+    "main.css": "/tierlist/static/css/main.4412084a.css",
+    "main.js": "/tierlist/static/js/main.c4958237.js",
     "static/js/787.38d536dd.chunk.js": "/tierlist/static/js/787.38d536dd.chunk.js",
     "static/media/Faputa.png": "/tierlist/static/media/Faputa.c83e71a7bb1cc00f8e86.png",
     "static/media/Claire Francois.png": "/tierlist/static/media/Claire Francois.2c8efa0fbab2580cac58.png",
@@ -549,12 +549,12 @@
     "static/media/Maia Azuma.png": "/tierlist/static/media/Maia Azuma.9027b4ab41c825b70499.png",
     "static/media/Yakumo Ezo.png": "/tierlist/static/media/Yakumo Ezo.7813026b9766c00cb8dc.png",
     "index.html": "/tierlist/index.html",
-    "main.cc030bcc.css.map": "/tierlist/static/css/main.cc030bcc.css.map",
-    "main.e86ff389.js.map": "/tierlist/static/js/main.e86ff389.js.map",
+    "main.4412084a.css.map": "/tierlist/static/css/main.4412084a.css.map",
+    "main.c4958237.js.map": "/tierlist/static/js/main.c4958237.js.map",
     "787.38d536dd.chunk.js.map": "/tierlist/static/js/787.38d536dd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cc030bcc.css",
-    "static/js/main.e86ff389.js"
+    "static/css/main.4412084a.css",
+    "static/js/main.c4958237.js"
   ]
 }
