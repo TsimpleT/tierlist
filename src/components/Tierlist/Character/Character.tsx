@@ -6,6 +6,7 @@ interface IProps {
     character: string;
     canEdit: boolean;
     showVoting: boolean;
+    size?: number;
 }
 
 export class Character extends React.Component<IProps> {
@@ -18,8 +19,8 @@ export class Character extends React.Component<IProps> {
                         src={require(`../../../assets/characters/${this.props.character}.png`)}
                         alt={this.props.character}
                         title={`${this.props.character} (${GET_SERIES_FOR_CHARACTER(this.props.character)})${titleAppend}`}
-                        width={35}
-                        height={35}
+                        width={this.props.size ?? 35}
+                        height={this.props.size ?? 35}
                     />
                 </div>
             </div>

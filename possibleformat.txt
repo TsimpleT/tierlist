@@ -1,0 +1,18 @@
+UPPER BRACKET GROUPS (48 characters)
+6 groups of 8 characters each
+Top 2 to final bracket
+Everyone else to LCQ1
+
+LOWER BRACKET GROUPS (48 characters)
+6 groups of 8 characters each
+Top 2 to LCQ1
+Everyone else eliminated
+
+LCQ1 (48 characters)
+6 groups of 8 characters each
+Top 2 to LCQ2
+Everyone else eliminated
+
+LCQ2 (12 characters)
+Top 4 to final bracket
+Everyone else eliminated

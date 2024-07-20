@@ -30,10 +30,10 @@ export class AppNav extends React.Component {
                     <img src={ImageUtil.getIconImage(EImageIcon.AGGREGATE_BEST_GIRL)} className={styles.homeButton} height={20}
                         title={"View Aggregate Tierlist"} alt={"View Aggregate Tierlist"} />
                 </Link>
-                {/* <Link to={"/tierlist/tournament"}>
+                <Link to={"/tierlist/tournament"}>
                     <img src={ImageUtil.getIconImage(EImageIcon.BRACKET)} className={styles.homeButton} height={20}
                         title={"Play Tournament"} alt={"Play Tournament"} />
-                </Link> */}
+                </Link>
                 <img src={ImageUtil.getIconImage(EImageIcon.WARNING)} title={"Show Important Info"} alt={"Show Important Info"}
                     className={styles.imageButton} onClick={showImportantInfo} height={16}/>
                 <img src={ImageUtil.getIconImage(EImageIcon.UPDATE_NOTES)} title={"Update Notes"} alt={"Update Notes"}

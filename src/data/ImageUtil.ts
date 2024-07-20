@@ -1,8 +1,9 @@
 import { GET_AGGREGATE_FAVORITE_CHARACTER } from "./SavedTierlists";
 
 export enum EImageIcon {
-    AGGREGATE_BEST_GIRL = "ABG",
     MENU = "Menu",
+    AGGREGATE_BEST_GIRL = "ABG",
+    BRACKET = "Bracket",
     TIERLIST = "Tierlist", // unused atm
     HOME = "Home", // unused atm
     COPY_TO_CLIPBOARD = "Copy",

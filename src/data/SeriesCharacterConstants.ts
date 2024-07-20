@@ -283,13 +283,13 @@ export const SERIES_CHARACTERS: {[series in ESeries]: string[]} = {
 }
 
 const CHARACTER_SERIES_DICT: {[key: string]: ESeries} = {};
+let allCharacters = [];
 for(let series of ALL_SERIES) {
-    for(let char of SERIES_CHARACTERS[series]) {
-        CHARACTER_SERIES_DICT[char] = series;
+    for(let character of SERIES_CHARACTERS[series]) {
+        CHARACTER_SERIES_DICT[character] = series;
+        allCharacters.push(character);
     }
 }
-export const TOTAL_CHARACTERS = Object.keys(CHARACTER_SERIES_DICT).length;
-console.log(TOTAL_CHARACTERS);
 
 export function GET_SERIES_FOR_CHARACTER(char: string): ESeries {
     if(char in CHARACTER_SERIES_DICT) {
@@ -297,6 +297,16 @@ export function GET_SERIES_FOR_CHARACTER(char: string): ESeries {
     }
     return ESeries.NONE;
 }
+
+for(let series of ALL_SERIES) {
+    for(let char of SERIES_CHARACTERS[series]) {
+        CHARACTER_SERIES_DICT[char] = series;
+    }
+}
+
+export const ALL_CHARACTERS = allCharacters;
+export const TOTAL_CHARACTERS = Object.keys(CHARACTER_SERIES_DICT).length;
+
 
 /*const MINOR_CHARACTERS: string[] = [
     "Yura Katayose", // Oshi no Ko
